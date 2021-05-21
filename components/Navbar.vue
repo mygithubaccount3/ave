@@ -286,4 +286,12 @@ export default {
             display: none;
         }
     }
+
+    .navbar.navbar-light.navbar-expand-lg {
+        position: absolute;
+        z-index: 9999;
+        right: 0;
+        left: 0;
+        background-color: transparent;
+    }
 </style>

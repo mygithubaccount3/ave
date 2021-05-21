@@ -6,6 +6,7 @@
       </template>
     </Navbar>
     <HeroHome title="Ave" linkTitle="Shop men's collection" />
+    <Items />
   </div>
 </template>
 
