@@ -40,7 +40,8 @@
         </b-nav-item-dropdown>
         <b-nav-item-dropdown text="Look Book" right>
             <div class="mob">
-                <b-dropdown-item 
+                <b-dropdown-item
+                    @click.stop
                     v-for="cat in [
                                     {
                                         id: 1,

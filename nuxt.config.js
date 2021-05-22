@@ -45,7 +45,8 @@ export default {
   fontawesome: {
     component: 'fa',
     icons: {
-      solid: ['faSearch', 'faShoppingCart', 'faHeart', 'faCompressAlt', 'faInfoCircle']
+      solid: ['faSearch', 'faShoppingCart', 'faHeart', 'faCompressAlt', 'faInfoCircle'],
+      brands: ['faFacebookF', 'faTwitter', 'faInstagramSquare', 'faPinterest']
     }
   },
 

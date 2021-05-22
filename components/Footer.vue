@@ -1,0 +1,231 @@
+// footer menu separate component
+// button is component
+// responsive
+// changing-image-size-in-markdown
+
+<template>
+  <div class="footer">
+      <div>
+          <div>
+          <h2>Information</h2>
+          <ul>
+              <li>The brand</li>
+              <li>Local stores</li>
+              <li>Customer service</li>
+              <li>Privacy & cookies</li>
+              <li>Site map</li>
+          </ul>
+      </div>
+      <div>
+          <h2>Why buy from us</h2>
+          <ul>
+              <li>Shipping & returns</li>
+              <li>Secure shopping</li>
+              <li>Testimonials</li>
+              <li>Award winning</li>
+              <li>Ethical trading</li>
+          </ul>
+      </div>
+      <div>
+          <h2>Your account</h2>
+          <ul>
+              <li>Sign in</li>
+              <li>Register</li>
+              <li>View cart</li>
+              <li>View your lookbooks</li>
+              <li>Track an order</li>
+              <li>Update information</li>
+          </ul>
+      </div>
+      <div>
+          <h2>Lookbook</h2>
+          <ul>
+              <li>Latest posts</li>
+              <li>Men's lookbook</li>
+              <li>Women's lookbook</li>
+              <li>Lookbooks RSS feed</li>
+              <li>View your lookbook</li>
+              <li>Delete your lookbook</li>
+          </ul>
+      </div>
+      <div>
+          <h2>Contact details</h2>
+          <ul style="width: 273px">
+              <li>Head Office: Avenue Fashion, 180-182 Regent Street, London.</li>
+              <li>Telephone: 0123-456-789</li>
+              <li>Email: support@yourwebsite.com</li>
+          </ul>
+      </div>
+      </div>
+      <div class="banners">
+          <Banner bgColor="#333333;" width="49%">
+              <h2>award winner</h2>
+              <p>fashion awards 2016</p>
+          </Banner>
+          <Banner bgColor="#00c8c8;" width="49%" otherStyle="display: flex; justify-content: space-around; align-items: center">
+              <div>
+                <fa :icon="['fab', 'facebook-f']" style="color: white; font-size: 36px; line-height: 48px"/>
+                <fa :icon="['fab', 'twitter']" style="color: white; font-size: 36px; line-height: 48px"/>
+                <fa :icon="['fab', 'instagram-square']" style="color: white; font-size: 36px; line-height: 48px"/>
+                <fa :icon="['fab', 'pinterest']" style="color: white; font-size: 36px; line-height: 48px"/>
+              </div>
+          </Banner>
+      </div>
+      <div class="copyright">
+          <div>
+              <span>© 2016 Avenue Fashion™</span><span>Design by RobbyDesigns.com          Dev by Loremipsum.com</span>
+          </div>
+      </div>
+  </div>
+</template>
+
+<script>
+export default {
+
+}
+</script>
+
+<style scoped>
+    .footer {
+        background-color: #f8f8f8;
+        margin-top: 124px;
+    }
+
+    .footer > div:first-of-type {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 63px;
+        margin: auto;
+        margin-bottom: 62px;
+        width: 60%;
+    }
+
+    .footer h2 {
+        color: #575153;
+        font-family: Montserrat;
+        font-size: 13px;
+        font-weight: bold;
+        line-height: 20px;
+        margin-bottom: 33px;
+        text-align: left;
+        text-transform: uppercase;
+    }
+
+    .footer ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .footer li {
+        color: #727272;
+        font-family: Montserrat;
+        font-weight: 300;
+        line-height: 30px;
+    }
+
+    .banners {
+        display: flex;
+        justify-content: space-between;
+        margin: auto;
+        margin-bottom: 60px;
+        padding-bottom: 63px;
+        width: 60%;
+    }
+
+    .banners h2 {
+        color: #ffffff;
+        font-family: Montserrat;
+        font-size: 36px;
+        
+        
+        
+        line-height: 48px;
+        margin-bottom: 5px;
+        text-align: center;
+        text-transform: uppercase;
+        /* Text style for "award winn" */
+        
+        font-weight: 700;
+        
+        letter-spacing: 1.8px;
+    }
+
+    .banners p {
+        color: #ffffff;
+        font-family: Montserrat;
+        font-size: 36px;
+        line-height: 48px;
+        font-weight: 300;
+        letter-spacing: 1.8px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .banner:last-child div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 65%;
+    }
+
+    .copyright {
+        background-color: #333333;
+        padding-top: 17px;
+        padding-bottom: 17px;
+    }
+
+    .copyright div {
+        display: flex;
+        justify-content: space-between;
+        margin: auto;
+        width: 60%;
+    }
+
+    .copyright span {
+        color: #999999;
+        font-family: Montserrat;
+        font-size: 13px;
+        font-weight: 400;
+        font-style: normal;
+        letter-spacing: normal;
+        line-height: normal;
+        text-align: left;
+        /* Text style for "© 2016 Ave" */
+        font-family: "Montserrat - Regular";
+        font-weight: 400;
+        font-style: normal;
+        letter-spacing: normal;
+        line-height: 30px;
+        /* Text style for "" */
+        color: #777777;
+        font-family: "Montserrat - Regular";
+        font-weight: 400;
+        font-style: normal;
+        letter-spacing: normal;
+        line-height: 21px;
+        /* Text style for "" */
+        color: #777777;
+        font-family: "Myriad Pro";
+        font-weight: 400;
+        font-style: normal;
+        letter-spacing: normal;
+        line-height: 21px;
+    }
+
+    @media screen and (max-width: 768px) {
+        .footer > div:first-of-type {
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .footer > div:first-of-type > div, .footer > div:first-of-type > div > h2 {
+            text-align: center;
+        }
+
+        .banners {
+            flex-direction: column;
+            width: 100%;
+        }
+    }
+</style>
