@@ -1,6 +1,12 @@
 <template>
   <div>
+    <Navbar title="Avenue Fashion">
+      <template v-slot:title>
+        <span>Avenue</span> Fashion
+      </template>
+    </Navbar>
     <Nuxt />
+    <Footer />
   </div>
 </template>
 

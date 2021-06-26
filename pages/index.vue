@@ -1,16 +1,10 @@
 <template>
   <div>
-    <Navbar title="Avenue Fashion">
-      <template v-slot:title>
-        <span>Avenue</span> Fashion
-      </template>
-    </Navbar>
     <HeroHome title="Ave" linkTitle="Shop men's collection" />
     <Items />
     <div class="lookbooks_wrapper">
       <Lookbook v-for="item in lookbooks" :key="item.id" :title="item.title" :description="item.description" :url="item.url" :imgSrc="item.imgSrc" />
     </div>
-    <Footer />
   </div>
 </template>
 

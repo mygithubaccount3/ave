@@ -1,6 +1,6 @@
 <template>
   <div>
-  <b-navbar toggleable="lg">
+  <b-navbar toggleable="lg" :style="this.$route.path == '/' ? 'background-color: transparent' : 'background-color: #f8f8f8'">
     <b-navbar-brand href="#"><slot name="title"></slot></b-navbar-brand>
 
     <b-navbar-toggle target="nav-collapse">
@@ -154,7 +154,15 @@ export default {
     }
 
     .navbar {
-        background-color: #f8f8f8;
+        margin-top: 45px;
+        padding-top: 21px;
+        padding-right: 6.6%;
+        padding-bottom: 28px;
+        padding-left: 6.6%;
+    }
+
+    .navbar-nav {
+        padding-top: 12px;
     }
 
     .navbar-brand {
