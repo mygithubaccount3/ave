@@ -31,13 +31,8 @@
           <b-dropdown-item href="#">RU</b-dropdown-item>
           <b-dropdown-item href="#">FA</b-dropdown-item>
         </b-nav-item-dropdown>
-        <b-nav-item href="#">The brand</b-nav-item>
-        <b-nav-item-dropdown text="Local Stores" right>
-          <b-dropdown-item href="#">EN</b-dropdown-item>
-          <b-dropdown-item href="#">ES</b-dropdown-item>
-          <b-dropdown-item href="#">RU</b-dropdown-item>
-          <b-dropdown-item href="#">FA</b-dropdown-item>
-        </b-nav-item-dropdown>
+        <b-nav-item href="/brand">The brand</b-nav-item>
+        <b-nav-item href="/stores">Local Stores</b-nav-item>
         <b-nav-item-dropdown text="Look Book" right>
             <div class="mob">
                 <b-dropdown-item

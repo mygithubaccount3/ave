@@ -124,15 +124,14 @@ export default {
     }
 
     @media screen and (max-width: 768px) {
-    .lookbook {
-        flex-direction: column;
-      padding: 5px;
-      width: 100%;
-    }
+        .lookbook {
+            flex-direction: column;
+            padding: 5px;
+            width: 100%;
+        }
 
-    .text {
-        align-items: stretch;
+        .text {
+            align-items: stretch;
+        }
     }
-    }
-
 </style>
