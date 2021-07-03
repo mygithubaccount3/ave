@@ -13,9 +13,9 @@
           <div id="map"><img :src="selectedStore ? selectedStore.city + '.png' : stores[0].city + '.png'"  alt=""></div>
           <div>
               <h2>{{ selectedStore ? selectedStore.city : stores[0].city}}</h2>
-              <p>{{ selectedStore ? selectedStore.address : stores[0].address}}</p>
+              <p><a :href="selectedStore ? selectedStore.addressURL : stores[0].addressURL">{{ selectedStore ? selectedStore.address : stores[0].address }}</a></p>
               <p>{{ selectedStore ? selectedStore.description : stores[0].description}}</p>
-              <p>{{ selectedStore ? selectedStore.address : stores[0].address}}</p>
+              <p><a :href="selectedStore ? selectedStore.addressURL : stores[0].addressURL">{{ selectedStore ? selectedStore.address : stores[0].address}}</a></p>
               <p><a :href="'tel:' + (selectedStore ? selectedStore.phone : stores[0].phone)">{{selectedStore ? selectedStore.phone : stores[0].phone}}</a></p>
               <p><a :href="selectedStore ? selectedStore.website : stores[0].website">{{ selectedStore ? selectedStore.website : stores[0].website}}</a></p>
               <p><a :href="'mailto:' + (selectedStore ? selectedStore.email : stores[0].email)">{{ selectedStore ? selectedStore.email : stores[0].email}}</a></p>
@@ -27,7 +27,6 @@
                       </a>
                   </div>
               </div>
-              
           </div>
       </div>
   </div>
@@ -42,6 +41,7 @@ export default {
                     id: 1,
                     city: 'London',
                     address: '180-182 Regent street, London, W1B 5BT',
+                    addressURL: 'https://goo.gl/maps/e9DUddeyb26vT5mr9',
                     description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi, minima itaque voluptatibus harum quaerat, maxime mollitia fugiat eos dolorum recusandae illo magni odio quidem nam voluptas.',
                     phone: '0123-456-789',
                     website: 'https://www.firststore.com',
@@ -70,6 +70,7 @@ export default {
                     id: 2,
                     city: 'NY',
                     address: '109 Columbus circle, New York, NY 10023',
+                    addressURL: 'https://goo.gl/maps/8TNTHwgpma8LCzfs5',
                     description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi, minima itaque voluptatibus harum quaerat, maxime mollitia fugiat eos dolorum recusandae illo magni odio quidem nam voluptas.',
                     phone: '0123-456-789',
                     website: 'https://www.firststore.com',
@@ -98,6 +99,7 @@ export default {
                     id: 3,
                     city: 'Paris',
                     address: '2133 Rue Saint-Honore, 75001 Paris',
+                    addressURL: 'https://goo.gl/maps/M1hix8gd4jic6UNk9',
                     description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi, minima itaque voluptatibus harum quaerat, maxime mollitia fugiat eos dolorum recusandae illo magni odio quidem nam voluptas.',
                     phone: '0123-456-789',
                     website: 'https://www.firststore.com',
@@ -156,27 +158,33 @@ export default {
         margin-bottom: 50px;
         width: 57%;
 
-        & > div > h2, & > div > p:first-of-type{
-            font-size: 1rem;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            text-transform: uppercase;
-        }
+        & > div {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
 
-        & > div > p:first-of-type {
-            font-size: 0.9rem;
-            margin-bottom: 8px;
-        }
+            & > h2, & > p:first-of-type{
+                font-size: 1rem;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                text-transform: uppercase;
+            }
 
-        & > div > p:last-of-type {
-            line-height: 1.4;
-            margin-bottom: 27px;
-        }
+            & > p:first-of-type {
+                font-size: 0.9rem;
+                margin-bottom: 8px;
+            }
 
-        & > div > h2 {
-            letter-spacing: 3px;
-            margin-bottom: 21px;
+            & > p:last-of-type {
+                line-height: 1.4;
+                margin-bottom: 27px;
+            }
+
+            & > h2 {
+                letter-spacing: 3px;
+                margin-bottom: 21px;
+            }
         }
     }
 
@@ -208,6 +216,19 @@ export default {
                     background: black;
                     align-items: center;
                     justify-content: center;
+                    transition: background-color 0.3s;
+
+                    &:hover {
+                        background: white;
+                    }
+
+                    & svg {
+                        transition: color 0.3s;
+                    }
+
+                    &:hover svg {
+                        color: black !important;
+                    }
                 }
             }
         }
