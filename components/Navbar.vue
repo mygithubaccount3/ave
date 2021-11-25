@@ -298,4 +298,10 @@ export default {
         left: 0;
         background-color: transparent;
     }
+
+    @media screen and (max-width: 768px) {
+        .navbar {
+            margin-top: 0;
+        }
+    }
 </style>

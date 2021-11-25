@@ -73,4 +73,22 @@ export default {
     p {
         font-size: 2.3rem;
     }
+
+    @media screen and (max-width: 768px) {
+        .wrapper {
+            padding-top: 50px;
+
+            & > div {
+                font-size: 12rem;
+                left: 0;
+                letter-spacing: 0;
+                margin-right: 0;
+            }
+        }
+
+        h1 {
+            letter-spacing: normal;
+            padding-left: 0;
+        }
+    }
 </style>

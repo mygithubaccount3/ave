@@ -85,7 +85,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
     .footer {
         background-color: #f8f8f8;
         margin-top: 124px;
@@ -213,19 +213,37 @@ export default {
     }
 
     @media screen and (max-width: 768px) {
-        .footer > div:first-of-type {
-            align-items: center;
-            flex-direction: column;
-            width: 100%;
-        }
+        .footer {
+            margin-top: 0;
+            padding-top: 50px;
 
-        .footer > div:first-of-type > div, .footer > div:first-of-type > div > h2 {
-            text-align: center;
+            & > div:first-of-type {
+                align-items: center;
+                flex-direction: column;
+                padding-top: 0;
+                width: 100%;
+            }
+
+            & > div:first-of-type > div, .footer > div:first-of-type > div > h2 {
+                text-align: center;
+            }
+
+            & h2 {
+                margin-bottom: 0.5rem;
+                text-align: center;
+            }
         }
 
         .banners {
             flex-direction: column;
+            margin-bottom: 0;
+            padding-bottom: 0;
             width: 100%;
+        }
+
+        .copyright div {
+            flex-direction: column;
+            width: 95%;
         }
     }
 </style>

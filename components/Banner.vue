@@ -31,4 +31,11 @@ export default {
         padding-bottom: 64px;
         padding-left: 58px;
     }
+
+    @media screen and (max-width: 768px) {
+        .banner {
+            padding: 0;
+            width: 100% !important;
+        }
+    }
 </style>

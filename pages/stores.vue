@@ -1,5 +1,5 @@
 <template>
-  <div style="padding-top: 157px; background-color: #f8f8f8">
+  <div class="stores">
       <Brand title="Local Stores" description="Find a store near you" />
       <div class="stores-list">
           <div v-for="store in stores" :key="store.id">
@@ -150,6 +150,12 @@ export default {
             height: auto;
         }
     }
+
+    .stores {
+        padding-top: 157px;
+        background-color: #f8f8f8
+    }
+
     .stores-list {
         display: flex;
         justify-content: space-between;
@@ -239,6 +245,7 @@ export default {
         border-radius: 3px;
         font-weight: bold;
         letter-spacing: 3.8px;
+        min-width: 190px;
         padding: 15px;
         text-transform: uppercase;
         width: 56%;
@@ -246,6 +253,42 @@ export default {
         &:hover {
             background-color: #00c8c8;
             color: #f8f8f8;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        #map {
+            width: 100%;
+        }
+
+        .stores {
+            padding-top: 95px;
+
+            &-list {
+                flex-direction: column;
+                margin-top: 0;
+                margin-bottom: 0;
+                padding: 15px;
+                padding-top: 50px;
+                width: 100%;
+
+                & > div:not(:first-of-type) {
+                    margin-top: 50px;
+                }
+            }
+        }
+
+        .store-info {
+            flex-direction: column;
+            padding: 15px;
+
+            & > div:last-of-type {
+                width: 100%;
+
+                & > div {
+                    width: 50%;
+                }
+            }
         }
     }
 </style>
