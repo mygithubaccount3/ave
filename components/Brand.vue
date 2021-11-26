@@ -74,6 +74,18 @@ export default {
         font-size: 2.3rem;
     }
 
+    @media screen and (max-width: 1500px) {
+        .wrapper {
+            & > div {
+                // left: calc(34% - 24rem);
+                font-size: 18rem;
+                margin-right: 0;
+                right: 0;
+                left: unset;
+            }
+        }
+    }
+
     @media screen and (max-width: 768px) {
         .wrapper {
             padding-top: 50px;
@@ -89,6 +101,14 @@ export default {
         h1 {
             letter-spacing: normal;
             padding-left: 0;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .wrapper {
+            & > div {
+                font-size: 8rem;
+            }
         }
     }
 </style>

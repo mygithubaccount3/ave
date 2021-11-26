@@ -218,10 +218,25 @@ export default {
             padding-top: 50px;
 
             & > div:first-of-type {
-                align-items: center;
-                flex-direction: column;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                align-items: baseline;
+                margin-bottom: 10px;
+                padding: 15px;
                 padding-top: 0;
                 width: 100%;
+
+                & > div {
+                    width: 50%;
+
+                    &:last-of-type {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        width: 100%;
+                    }
+                }
             }
 
             & > div:first-of-type > div, .footer > div:first-of-type > div > h2 {
@@ -235,15 +250,28 @@ export default {
         }
 
         .banners {
-            flex-direction: column;
             margin-bottom: 0;
-            padding-bottom: 0;
             width: 100%;
         }
 
         .copyright div {
-            flex-direction: column;
             width: 95%;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .footer {
+            & > div {
+                &:first-of-type {
+                    align-items: center;
+                    flex-direction: column;
+                }
+            }
+        }
+
+        .banners {
+            flex-direction: column;
+            padding-bottom: 0;
         }
     }
 </style>

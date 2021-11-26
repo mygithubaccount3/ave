@@ -12,20 +12,24 @@
       <div class="store-info">
           <div id="map"><img :src="selectedStore ? selectedStore.city + '.png' : stores[0].city + '.png'"  alt=""></div>
           <div>
-              <h2>{{ selectedStore ? selectedStore.city : stores[0].city}}</h2>
-              <p><a :href="selectedStore ? selectedStore.addressURL : stores[0].addressURL">{{ selectedStore ? selectedStore.address : stores[0].address }}</a></p>
-              <p>{{ selectedStore ? selectedStore.description : stores[0].description}}</p>
-              <p><a :href="selectedStore ? selectedStore.addressURL : stores[0].addressURL">{{ selectedStore ? selectedStore.address : stores[0].address}}</a></p>
-              <p><a :href="'tel:' + (selectedStore ? selectedStore.phone : stores[0].phone)">{{selectedStore ? selectedStore.phone : stores[0].phone}}</a></p>
-              <p><a :href="selectedStore ? selectedStore.website : stores[0].website">{{ selectedStore ? selectedStore.website : stores[0].website}}</a></p>
-              <p><a :href="'mailto:' + (selectedStore ? selectedStore.email : stores[0].email)">{{ selectedStore ? selectedStore.email : stores[0].email}}</a></p>
-              <p>{{ selectedStore ? selectedStore.workingHours: stores[0].workingHours}}</p>
               <div>
-                  <div v-for="social in (selectedStore ? selectedStore.socials : stores[0].socials)" :key="social.id">
-                      <a :href="social.url">
-                          <fa :icon="['fab', social.name]" style="color: white; font-size: 20px; line-height: 26px"/>
-                      </a>
-                  </div>
+                    <h2>{{ selectedStore ? selectedStore.city : stores[0].city}}</h2>
+                    <p><a :href="selectedStore ? selectedStore.addressURL : stores[0].addressURL">{{ selectedStore ? selectedStore.address : stores[0].address }}</a></p>
+                    <p>{{ selectedStore ? selectedStore.description : stores[0].description}}</p>
+                    <p><a :href="selectedStore ? selectedStore.addressURL : stores[0].addressURL">{{ selectedStore ? selectedStore.address : stores[0].address}}</a></p>
+              </div>
+              <div>
+                                <p><a :href="'tel:' + (selectedStore ? selectedStore.phone : stores[0].phone)">{{selectedStore ? selectedStore.phone : stores[0].phone}}</a></p>
+                <p><a :href="selectedStore ? selectedStore.website : stores[0].website">{{ selectedStore ? selectedStore.website : stores[0].website}}</a></p>
+                <p><a :href="'mailto:' + (selectedStore ? selectedStore.email : stores[0].email)">{{ selectedStore ? selectedStore.email : stores[0].email}}</a></p>
+                <p>{{ selectedStore ? selectedStore.workingHours: stores[0].workingHours}}</p>
+                <div>
+                    <div v-for="social in (selectedStore ? selectedStore.socials : stores[0].socials)" :key="social.id">
+                        <a :href="social.url">
+                            <fa :icon="['fab', social.name]" style="color: white; font-size: 20px; line-height: 26px"/>
+                        </a>
+                    </div>
+                </div>
               </div>
           </div>
       </div>
@@ -198,7 +202,7 @@ export default {
         display: flex;
         justify-content: space-between;
 
-        & > div > p > a {
+        & > div > div > p > a {
             color: black;
 
             &:hover {
@@ -209,7 +213,7 @@ export default {
         & > div:last-of-type {
             width: 49%;
 
-            & > div {
+            & > div:last-of-type > div {
                 display: flex;
                 width: 30%;
                 justify-content: space-between;
@@ -265,15 +269,26 @@ export default {
             padding-top: 95px;
 
             &-list {
-                flex-direction: column;
+                flex-direction: row;
+                flex-wrap: wrap;
                 margin-top: 0;
                 margin-bottom: 0;
                 padding: 15px;
                 padding-top: 50px;
                 width: 100%;
 
-                & > div:not(:first-of-type) {
-                    margin-top: 50px;
+                & > div {
+                    margin-bottom: 50px;
+                    width: 45%;
+
+                    &:last-of-type {
+                        text-align: center;
+                        width: 100%;
+
+                        & button {
+                            margin: auto;
+                        }
+                    }
                 }
             }
         }
@@ -283,10 +298,57 @@ export default {
             padding: 15px;
 
             & > div:last-of-type {
+                align-items: baseline;
+                display: flex;
+                justify-content: space-between;
                 width: 100%;
 
                 & > div {
-                    width: 50%;
+                    width: 45%;
+                }
+
+                & > div:last-of-type > div {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .stores {
+            &-list {
+                flex-direction: column;
+                margin-top: 0;
+                margin-bottom: 0;
+                padding: 15px;
+                padding-top: 50px;
+                width: 100%;
+
+                & > div {
+                    text-align: center;
+                    width: 100%;
+
+                    & button {
+                        margin: auto;
+                    }
+                }
+            }
+        }
+
+        .store-info {
+            & > div {
+                &:last-of-type {
+                    flex-direction: column;
+
+                    & > div {
+                        width: 100%;
+
+                        &:last-of-type {
+                            & > div {
+                                width: 50%;
+                            }
+                        }
+                    }
                 }
             }
         }
