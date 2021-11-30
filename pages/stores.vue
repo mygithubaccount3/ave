@@ -266,7 +266,7 @@ export default {
         }
 
         .stores {
-            padding-top: 95px;
+            padding-top: 0;
 
             &-list {
                 flex-direction: row;

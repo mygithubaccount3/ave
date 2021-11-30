@@ -41,6 +41,10 @@ export default {
 </script>
 
 <style scoped>
+  div:first-of-type {
+    padding-top: 85px;
+  }
+
   .lookbooks_wrapper {
     display: flex;
     justify-content: space-between;

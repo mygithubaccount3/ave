@@ -110,9 +110,5 @@ export default {
         h1 {
             font-size: 100px;
         }
-
-        div {
-            padding: 9px;
-        }
     }
 </style>
