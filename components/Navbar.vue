@@ -134,6 +134,7 @@ export default {
   methods: {
     mobileMenu: function () {
       this.isMobileMenuOpened = !this.isMobileMenuOpened;
+      document.querySelector('body').style.overflowY = this.isMobileMenuOpened ? 'hidden' : 'auto';
     },
   },
 };
@@ -181,7 +182,7 @@ nav {
 
   &:hover {
     color: #00c8c8;
-    cursor: pointer;
+    //cursor: pointer;
   }
 
   &:hover .dropdown_menu--animated {
@@ -244,6 +245,7 @@ nav {
 
 @media screen and (max-width: 768px) {
   .dropdown_menu {
+    display: block !important;
     position: relative;
   }
 
@@ -252,6 +254,7 @@ nav {
     left: -100%;
     top: 27px;
     flex-direction: column;
+    align-items: flex-start;
     background-color: #fff;
     width: 100%;
     border-radius: 0;
@@ -260,10 +263,23 @@ nav {
     box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
     z-index: 999;
     padding: 0;
+
+    & > li {
+      padding-top: 5px;
+      padding-bottom: 5px;
+
+      & > div {
+        color: #00c8c8;
+        text-align: left;
+      }
+    }
   }
 
   .menu.active {
     left: 0;
+    justify-content: flex-start;
+    height: 100%;
+    overflow-y: scroll;
   }
 
   .hamburger {
