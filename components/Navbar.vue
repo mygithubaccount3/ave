@@ -252,14 +252,18 @@ nav {
     width: 100%;
     border-radius: 0;
     text-align: center;
-    transition: 0.3s;
+    transition: .3s;
     box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
     z-index: 999;
     padding: 0;
+    justify-content: flex-start;
+    height: 100%;
 
     & > li {
       padding-top: 5px;
       padding-bottom: 5px;
+      flex-direction: column;
+      align-items: flex-start;
 
       & > div {
         color: #00c8c8;
@@ -270,14 +274,7 @@ nav {
 
   .menu.active {
     left: 0;
-    justify-content: flex-start;
-    height: 100%;
     overflow-y: scroll;
-
-    & > li {
-      align-items: flex-start;
-      flex-direction: column;
-    }
   }
 
   .hamburger {
