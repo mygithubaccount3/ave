@@ -295,12 +295,12 @@ export default {
 
         .store-info {
             flex-direction: column;
-            padding: 15px;
 
             & > div:last-of-type {
                 align-items: baseline;
                 display: flex;
                 justify-content: space-between;
+                padding: 15px;
                 width: 100%;
 
                 & > div {

@@ -6,24 +6,16 @@
         :key="item.id"
         :class="item.hasOwnProperty('subitems') ? 'dropdown' : 'menu__item'"
       >
-        <a
-          class="menu__link"
-          v-if="!item.hasOwnProperty('subitems')"
-          :href="item.link"
-          >{{ item.title }}</a
-        >
-        <div v-else>
-          {{ item.title }}
-          <ul class="dropdown_menu dropdown_menu--animated">
-            <li
-              v-for="subitem in item.subitems"
-              :key="subitem.id"
-              :class="'subitem' + subitem.id"
-            >
-              <a :href="subitem.link">{{ subitem.title }}</a>
-            </li>
-          </ul>
-        </div>
+        <a class="menu__link" :href="item.link">{{ item.title }}</a>
+        <ul class="dropdown_menu dropdown_menu--animated">
+          <li
+            v-for="subitem in item.subitems"
+            :key="subitem.id"
+            :class="'subitem' + subitem.id"
+          >
+            <a :href="subitem.link">{{ subitem.title }}</a>
+          </li>
+        </ul>
       </li>
     </ul>
     <div
@@ -53,6 +45,7 @@ export default {
         {
           id: 0,
           title: "Mens",
+          link: "/ave/mens",
           subitems: [
             {
               id: 1,
@@ -74,6 +67,7 @@ export default {
         {
           id: 4,
           title: "Womens",
+          link: "/ave/womens",
           subitems: [
             {
               id: 5,
@@ -105,6 +99,7 @@ export default {
         {
           id: 10,
           title: "Look book",
+          link: "/ave/lookbook",
           subitems: [
             {
               id: 11,
@@ -134,7 +129,9 @@ export default {
   methods: {
     mobileMenu: function () {
       this.isMobileMenuOpened = !this.isMobileMenuOpened;
-      document.querySelector('body').style.overflowY = this.isMobileMenuOpened ? 'hidden' : 'auto';
+      document.querySelector("body").style.overflowY = this.isMobileMenuOpened
+        ? "hidden"
+        : "auto";
     },
   },
 };
@@ -155,10 +152,6 @@ nav {
   justify-content: center;
   list-style-type: none;
 
-  &__item:hover &__link {
-    color: #00c8c8;
-  }
-
   & > li {
     padding: 20px 40px;
     color: black;
@@ -171,6 +164,10 @@ nav {
     & > a {
       color: black;
       text-decoration: none;
+
+      &:hover {
+        color: #00c8c8;
+      }
     }
   }
 }
@@ -179,11 +176,6 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-
-  &:hover {
-    color: #00c8c8;
-    //cursor: pointer;
-  }
 
   &:hover .dropdown_menu--animated {
     display: block;
@@ -247,6 +239,7 @@ nav {
   .dropdown_menu {
     display: block !important;
     position: relative;
+    top: 0;
   }
 
   .menu {
@@ -280,6 +273,11 @@ nav {
     justify-content: flex-start;
     height: 100%;
     overflow-y: scroll;
+
+    & > li {
+      align-items: flex-start;
+      flex-direction: column;
+    }
   }
 
   .hamburger {
