@@ -58,5 +58,8 @@ export default {
   target: 'static',
   router: {
     base: '/ave/'
-  }
+  },
+  publicPath: process.env.NODE_ENV === 'production'
+    ? '/ave/' // note the trailing slash
+    : '/',
 }
