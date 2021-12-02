@@ -10,7 +10,7 @@
           </div>
       </div>
       <div class="store-info">
-          <div id="map"><img :src="selectedStore ? selectedStore.city + '.png' : stores[0].city + '.png'"  alt=""></div>
+          <div id="map"><img :src="selectedStore ? selectedStore.city.toLowerCase() + '.png' : stores[0].city.toLowerCase() + '.png'"  alt=""></div>
           <div>
               <div>
                     <h2>{{ selectedStore ? selectedStore.city : stores[0].city}}</h2>
