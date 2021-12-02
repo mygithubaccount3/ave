@@ -57,6 +57,6 @@ export default {
   ssr: false,
   target: 'static',
   router: {
-    base: '/ave/'
+    base: '/ave/dist/'
   }
 }
