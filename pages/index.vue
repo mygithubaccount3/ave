@@ -17,22 +17,22 @@ export default {
           id: 1,
           title: 'Men\'s lookbook',
           description: 'Lorem ipsum dolor sit amet eras facilisis consectetur adipiscing elit lor, integer lorem consecteur dignissim laciniqui. Elementum metus facilisis ut phasellu.',
-          url: '/men',
-          imgSrc: '/silhouette.png'
+          url: '/ave/men',
+          imgSrc: '/ave/silhouette.png'
         },
         {
           id: 2,
           title: 'Women\'s lookbook',
           description: 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames . Pellentesque laoreet quis enim et mattis. Quisque interdum felis tellus.',
-          url: '/women',
-          imgSrc: '/silhouette.png'
+          url: '/ave/women',
+          imgSrc: '/ave/silhouette.png'
         },
         {
           id: 3,
           title: 'Your lookbook',
           description: 'See an item you like and click the  button to add it to your lookbook where you can create your own perfect look. It’s like your own boutique!',
-          url: '/your',
-          imgSrc: '/silhouette.png'
+          url: '/ave/your',
+          imgSrc: '/ave/silhouette.png'
         }
       ]
     }
