@@ -10,7 +10,7 @@
       </div>
     </div>
     <div class="store-info">
-      <div id="map">
+      <div id="map" ref="map">
         <img
           :src="
             selectedStore
@@ -214,7 +214,7 @@ export default {
       const selectedStore = this.stores.find((el) => el.id === storeID);
       this.selectedStore = selectedStore;
       window.scrollTo({
-        top: document.querySelector("#map").offsetTop - 83,
+        top: this.$refs.map.offsetTop - 83,
         behavior: "smooth",
       });
     },
@@ -224,8 +224,6 @@ export default {
 
 <style lang="scss" scoped>
 #map {
-  width: 49%;
-
   & > img {
     width: 100%;
     height: auto;
@@ -233,89 +231,91 @@ export default {
 }
 
 .stores {
-  padding-top: 157px;
   background-color: #f8f8f8;
-}
 
-.stores-list {
-  display: flex;
-  justify-content: space-between;
-  margin: auto;
-  margin-top: 60px;
-  margin-bottom: 50px;
-  width: 57%;
+  &-list {
+    padding: 15px;
+    padding-top: 0;
 
-  & > div {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    & > div {
+      margin-bottom: 50px;
+      text-align: center;
 
-    & > h2,
-    & > p:first-of-type {
-      font-size: 1rem;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      text-transform: uppercase;
-    }
+      & > h2,
+      & > p:first-of-type {
+        font-size: 1rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        text-transform: uppercase;
+      }
 
-    & > p:first-of-type {
-      font-size: 0.9rem;
-      margin-bottom: 8px;
-    }
+      & > p:first-of-type {
+        font-size: 0.9rem;
+        margin-bottom: 8px;
+      }
 
-    & > p:last-of-type {
-      line-height: 1.4;
-      margin-bottom: 27px;
-    }
+      & > p:last-of-type {
+        line-height: 1.4;
+        margin-bottom: 27px;
+      }
 
-    & > h2 {
-      letter-spacing: 3px;
-      margin-bottom: 21px;
+      & > h2 {
+        letter-spacing: 3px;
+        margin-bottom: 21px;
+      }
+
+      & button {
+        margin: auto;
+      }
     }
   }
 }
 
 .store-info {
-  display: flex;
-  justify-content: space-between;
-
-  & > div > div > p > a {
-    color: black;
-
-    &:hover {
-      color: grey;
+  & > div {
+    & > div {
+      & > p {
+        & > a {
+          color: #000;
+        }
+      }
     }
-  }
+    &:last-of-type {
+      //   align-items: baseline;
+      //   display: flex;
+      //   justify-content: space-between;
+      padding: 15px;
+      //   width: 100%;
 
-  & > div:last-of-type {
-    width: 49%;
+      //   flex-direction: column;
 
-    & > div:last-of-type > div {
-      display: flex;
-      width: 30%;
-      justify-content: space-between;
-
-      & > div {
+      & > div:last-of-type > div {
         display: flex;
-        width: 30px;
-        height: 30px;
-        border-radius: 15px;
-        background: black;
-        align-items: center;
-        justify-content: center;
-        transition: background-color 0.3s;
+        justify-content: space-between;
+        width: 50%;
 
-        &:hover {
-          background: white;
-        }
+        & > div {
+          display: flex;
+          width: 30px;
+          height: 30px;
+          border-radius: 15px;
+          background: black;
+          align-items: center;
+          justify-content: center;
+          transition: background-color 0.3s;
 
-        & svg {
-          transition: color 0.3s;
-        }
+          &:hover {
+            background: white;
+          }
 
-        &:hover svg {
-          color: black !important;
+          & svg {
+            transition: color 0.3s;
+          }
+
+          &:hover svg {
+            color: black !important;
+          }
         }
       }
     }
@@ -338,71 +338,26 @@ button {
   }
 }
 
-@media screen and (max-width: 768px) {
-  #map {
-    width: 100%;
-  }
-
-  .stores {
-    padding-top: 0;
-
-    &-list {
-      flex-direction: row;
-      flex-wrap: wrap;
-      margin-top: 0;
-      margin-bottom: 0;
-      padding: 15px;
-      padding-top: 50px;
-      width: 100%;
-
-      & > div {
-        margin-bottom: 50px;
-        width: 45%;
-
-        &:last-of-type {
-          text-align: center;
-          width: 100%;
-
-          & button {
-            margin: auto;
-          }
-        }
-      }
-    }
-  }
-
+@media screen and (min-width: 480px) {
   .store-info {
-    flex-direction: column;
-
     & > div:last-of-type {
-      align-items: baseline;
-      display: flex;
-      justify-content: space-between;
-      padding: 15px;
-      width: 100%;
-
-      & > div {
-        width: 45%;
-      }
-
       & > div:last-of-type > div {
-        width: 100%;
+        width: 30%;
       }
     }
   }
-}
 
-@media screen and (max-width: 480px) {
-  .stores {
-    &-list {
-      flex-direction: column;
-      margin-top: 0;
-      margin-bottom: 0;
-      padding: 15px;
-      padding-top: 50px;
-      width: 100%;
+  .stores-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 15px;
+    padding-top: 50px;
 
-      & > div {
+    & > div {
+      width: 45%;
+
+      &:last-of-type {
         text-align: center;
         width: 100%;
 
@@ -412,21 +367,30 @@ button {
       }
     }
   }
+}
 
-  .store-info {
-    & > div {
-      &:last-of-type {
+@media screen and (min-width: 768px) {
+    .store-info {
+        justify-content: space-between;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+  .stores {
+    padding-top: 157px;
+
+    &-list {
+      display: flex;
+      justify-content: space-between;
+      margin: auto;
+      margin-top: 60px;
+      margin-bottom: 50px;
+      width: 57%;
+
+      & > div {
+        display: flex;
         flex-direction: column;
-
-        & > div {
-          width: 100%;
-
-          &:last-of-type {
-            & > div {
-              width: 50%;
-            }
-          }
-        }
+        justify-content: space-between;
       }
     }
   }
