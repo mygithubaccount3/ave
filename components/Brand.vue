@@ -96,8 +96,6 @@ p {
     //   letter-spacing: 14rem;
       font-size: 18rem;
       margin-right: 0;
-      right: 0;
-      left: unset;
     }
   }
 }

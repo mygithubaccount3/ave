@@ -113,12 +113,15 @@ export default {
         }
     }
 
-    @media screen and (min-width: 1500px) {
+    // @media screen and (min-width: 1500px) {
+        
+    // }
+
+    @media screen and (min-width: 2050px) {
         .brand_hero {
             margin: auto;
             width: 57%;
         }
-        
     }
 
     // @media screen and (min-width: 480px) {

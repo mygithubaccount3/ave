@@ -151,9 +151,10 @@ nav {
   display: flex;
   justify-content: center;
   list-style-type: none;
+  padding-left: 0;
 
   & > li {
-    padding: 20px 40px;
+    padding: 20px 39px;
     color: black;
     background: white;
     position: relative;

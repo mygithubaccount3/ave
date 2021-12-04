@@ -358,7 +358,6 @@ button {
       width: 45%;
 
       &:last-of-type {
-        text-align: center;
         width: 100%;
 
         & button {
@@ -370,29 +369,63 @@ button {
 }
 
 @media screen and (min-width: 768px) {
-    .store-info {
-        justify-content: space-between;
+    .stores {
+        padding-top: 83px;
     }
 }
 
 @media screen and (min-width: 1500px) {
+  #map {
+    width: 151%;
+  }
+
+  .store-info {
+    display: flex;
+
+    & > div {
+      &:last-of-type {
+        padding-top: 36px;
+      }
+    }
+  }
+
   .stores {
     padding-top: 157px;
 
     &-list {
-      display: flex;
-      justify-content: space-between;
       margin: auto;
-      margin-top: 60px;
-      margin-bottom: 50px;
-      width: 57%;
+      margin-top: 10px;
+      margin-bottom: 47px;
+      width: 80%;
 
       & > div {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 0;
+        text-align: left;
+        width: 32%;
+
+        &:last-of-type {
+          width: 32%;
+        }
+
+        & > button,
+        &:last-of-type > button {
+          margin-left: 0;
+        }
+
+        & > button {
+          width: 59%;
+        }
       }
     }
+  }
+}
+
+@media screen and (min-width: 2050px) {
+  .stores-list {
+    width: 58.6%;
   }
 }
 </style>
