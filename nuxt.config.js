@@ -57,6 +57,6 @@ export default {
   ssr: true,
   target: 'server',
   router: {
-    base: '/ave/'
+    base: '/'
   }
 }
