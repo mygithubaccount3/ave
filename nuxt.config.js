@@ -54,8 +54,8 @@ export default {
   build: {
   },
 
-  ssr: false,
-  target: 'static',
+  ssr: true,
+  target: 'server',
   router: {
     base: '/ave/'
   }
