@@ -45,22 +45,22 @@ export default {
         {
           id: 0,
           title: "Mens",
-          link: "/ave/mens",
+          link: "/mens",
           subitems: [
             {
               id: 1,
               title: "Title 1",
-              link: "/ave/1",
+              link: "/1",
             },
             {
               id: 2,
               title: "Title 2",
-              link: "/ave/2",
+              link: "/2",
             },
             {
               id: 3,
               title: "Title 3",
-              link: "/ave/3",
+              link: "/3",
             },
           ],
         },
@@ -72,49 +72,49 @@ export default {
             {
               id: 5,
               title: "Title 4",
-              link: "/ave/4",
+              link: "/4",
             },
             {
               id: 6,
               title: "Title 5",
-              link: "/ave/5",
+              link: "/5",
             },
             {
               id: 7,
               title: "Title 6",
-              link: "/ave/6",
+              link: "/6",
             },
           ],
         },
         {
           id: 8,
           title: "The brand",
-          link: "/ave/brand",
+          link: "/brand",
         },
         {
           id: 9,
           title: "Local stores",
-          link: "/ave/stores",
+          link: "/stores",
         },
         {
           id: 10,
           title: "Look book",
-          link: "/ave/lookbook",
+          link: "/lookbook",
           subitems: [
             {
               id: 11,
               title: "Title 7",
-              link: "/ave/7",
+              link: "/7",
             },
             {
               id: 12,
               title: "Title 8",
-              link: "/ave/8",
+              link: "/8",
             },
             {
               id: 13,
               title: "Title 9",
-              link: "/ave/9",
+              link: "/9",
             },
           ],
         },
