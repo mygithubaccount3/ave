@@ -61,7 +61,7 @@ export default {
       }
     }
   },
-  beforeCreate() {
+  created() {
     if (process.client) {
       this.checkIfOnMobile();
     }
