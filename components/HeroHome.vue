@@ -11,7 +11,8 @@
       <b-carousel-slide
         v-for="link in links"
         :key="link.id"
-        :img-src="link.background"
+        v-lazy="link.background"
+        img-src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkqAcAAIUAgUW0RjgAAAAASUVORK5CYII="
         :img-alt="link.title"
       >
         <div class="heroHome_wrapper">

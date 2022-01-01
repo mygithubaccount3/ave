@@ -1,6 +1,10 @@
 <template>
   <div class="item">
-    <img :src="imgSrc" alt="" />
+    <img
+      v-lazy="imgSrc"
+      src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkqAcAAIUAgUW0RjgAAAAASUVORK5CYII="
+      alt=""
+    />
     <span class="price">{{ price }}</span>
     <fa :icon="faInfoCircle" color="white" class="infoIcon" />
     <div class="thumbs">
