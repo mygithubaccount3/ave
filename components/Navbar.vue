@@ -67,7 +67,7 @@ export default {
         {
           id: 4,
           title: "Womens",
-          link: "/ave/womens",
+          link: "/womens",
           subitems: [
             {
               id: 5,
