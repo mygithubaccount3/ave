@@ -4,11 +4,11 @@
     <span class="price">{{ price }}</span>
     <fa :icon="faInfoCircle" color="white" class="infoIcon" />
     <div class="thumbs">
-      <b-img-lazy
+      <img
         v-for="thumb in thumbs"
         :key="thumb.id"
-        :blank-src="'data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkqAcAAIUAgUW0RjgAAAAASUVORK5CYII='"
-        :src="thumb.src"
+        src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkqAcAAIUAgUW0RjgAAAAASUVORK5CYII="
+        v-lazy="thumb.src"
         :alt="thumb.title"
       />
     </div>
