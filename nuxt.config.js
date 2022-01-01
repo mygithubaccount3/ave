@@ -54,7 +54,7 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     extend (config, { isDev, isClient, loaders: { vue } }) {
-      vue.transformAssetUrls.img = ['data-src', 'src']
+      vue.transformAssetUrls.img = ['src']
     }
   },
 
