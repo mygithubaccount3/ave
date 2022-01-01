@@ -195,33 +195,11 @@ export default {};
 }
 
 .copyright span {
-  color: #999999;
+  color: #fff;
   font-family: Montserrat;
   font-size: 13px;
-  font-weight: 400;
-  font-style: normal;
-  letter-spacing: normal;
-  line-height: normal;
   text-align: left;
-  /* Text style for "© 2016 Ave" */
-  font-family: "Montserrat - Regular";
-  font-weight: 400;
-  font-style: normal;
-  letter-spacing: normal;
-  line-height: 30px;
   /* Text style for "" */
-  color: #777777;
-  font-family: "Montserrat - Regular";
-  font-weight: 400;
-  font-style: normal;
-  letter-spacing: normal;
-  line-height: 21px;
-  /* Text style for "" */
-  color: #777777;
-  font-family: "Myriad Pro";
-  font-weight: 400;
-  font-style: normal;
-  letter-spacing: normal;
   line-height: 21px;
 }
 

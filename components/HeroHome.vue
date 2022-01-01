@@ -12,6 +12,7 @@
         v-for="link in links"
         :key="link.id"
         :img-src="link.background"
+        :img-alt="link.title"
       >
         <div class="heroHome_wrapper">
           <h1>{{ title }}</h1>
