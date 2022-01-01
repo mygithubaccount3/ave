@@ -21,7 +21,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    '~/plugins/vue-lazysizes.server.js'
+    '~/plugins/vue-lazysizes.js'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
