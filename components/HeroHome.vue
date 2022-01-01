@@ -1,7 +1,7 @@
 <template>
   <div class="heroHome">
     <b-carousel
-      v-if="!isOnMobile"
+      v-show="!isOnMobile"
       id="carousel-1"
       :interval="4000"
       :fade="true"
@@ -19,7 +19,7 @@
         </div>
       </b-carousel-slide>
     </b-carousel>
-    <div class="header_mobile" v-else>
+    <div class="header_mobile" v-show="isOnMobile">
       <h1>{{ title }}</h1>
       <div class="header_mobile__links-wrapper">
         <nuxt-link
