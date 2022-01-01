@@ -40,16 +40,16 @@ export default {
   name: "HeroHome",
   props: {
     title: {
-      type: String
+      type: String,
     },
     links: {
       type: Array,
-      required: true
-    }
+      required: true,
+    },
   },
   data() {
     return {
-      isOnMobile: true
+      isOnMobile: true,
     };
   },
   methods: {
@@ -59,19 +59,15 @@ export default {
       } else {
         this.isOnMobile = true;
       }
-    }
-  },
-  created() {
-    if (process.client) {
-      this.checkIfOnMobile();
-    }
+    },
   },
   beforeMount() {
     window.addEventListener("resize", this.checkIfOnMobile);
+    this.checkIfOnMobile();
   },
   beforeUnmount() {
     window.removeEventListener("resize", this.checkIfOnMobile);
-  }
+  },
 };
 </script>
 
