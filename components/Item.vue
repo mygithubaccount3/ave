@@ -4,8 +4,7 @@
         <span class="price">{{ price }}</span>
         <fa :icon="faInfoCircle" color="white" class="infoIcon"/>
         <div class="thumbs">
-            <img src="https://images.unsplash.com/photo-1621423028668-d5f9555ebea3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1868&q=80" alt="">
-            <img src="https://images.unsplash.com/photo-1621423028668-d5f9555ebea3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1868&q=80" alt="">
+            <img v-for="thumb in thumbs" :key="thumb.id" :data-src="thumb.src" :alt="thumb.title">
         </div>
         <ItemMenu title="this is a title" description="And this is a description" />
     </div>
@@ -23,6 +22,9 @@ export default {
         price: {
             type: String,
             required: true
+        },
+        thumbs: {
+            type: Array
         }
     },
     computed: {
