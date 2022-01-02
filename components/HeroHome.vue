@@ -1,6 +1,6 @@
 <template>
   <div class="heroHome">
-    <b-carousel
+    <!-- <b-carousel
       id="carousel-1"
       :interval="4000"
       :fade="true"
@@ -20,7 +20,7 @@
           <nuxt-link :to="link.url">{{ link.title }}</nuxt-link>
         </div>
       </b-carousel-slide>
-    </b-carousel>
+    </b-carousel> -->
     <div class="header_mobile">
       <h1>{{ title }}</h1>
       <div class="header_mobile__links-wrapper">
