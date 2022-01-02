@@ -8,13 +8,13 @@
       controls
       background="#ababab"
     >
-      <b-carousel-slide v-for="link in links" :key="link.id">
+      <b-carousel-slide
+        v-for="link in links"
+        :key="link.id"
+        :img-src="link.background"
+        :img-alt="link.title"
+      >
         <div class="heroHome_wrapper">
-          <img
-            v-lazy="link.background"
-            src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkqAcAAIUAgUW0RjgAAAAASUVORK5CYII="
-            :alt="link.title"
-          />
           <h1>{{ title }}</h1>
           <nuxt-link :to="link.url">{{ link.title }}</nuxt-link>
         </div>
@@ -40,16 +40,16 @@ export default {
   name: "HeroHome",
   props: {
     title: {
-      type: String
+      type: String,
     },
     links: {
       type: Array,
-      required: true
-    }
+      required: true,
+    },
   },
   data() {
     return {
-      isOnMobile: true
+      isOnMobile: true,
     };
   },
   methods: {
@@ -59,7 +59,7 @@ export default {
       } else {
         this.isOnMobile = true;
       }
-    }
+    },
   },
   beforeMount() {
     window.addEventListener("resize", this.checkIfOnMobile);
@@ -67,7 +67,7 @@ export default {
   },
   beforeUnmount() {
     window.removeEventListener("resize", this.checkIfOnMobile);
-  }
+  },
 };
 </script>
 
