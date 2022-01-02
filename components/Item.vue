@@ -1,8 +1,8 @@
 <template>
   <div class="item">
     <img
-      v-lazy="imgSrc"
-      :src="`https://via.placeholder.com/${imgSrc.split('/')[3]}/${imgSrc.split('/')[4]}/FFFFFF/FFFFFF?text=&nbsp;`"
+      
+      :src="`https://via.placeholder.com/${imgSrc.split('/')[3]}/${imgSrc.split('/')[4]}/FFFFFF/FFFFFF?text=;`"
       alt=""
       :width="imgSrc.split('/')[3]"
       :height="imgSrc.split('/')[4]"
