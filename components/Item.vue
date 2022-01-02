@@ -2,7 +2,7 @@
   <div class="item">
     <img
       v-lazy="imgSrc"
-      src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkqAcAAIUAgUW0RjgAAAAASUVORK5CYII="
+      :src="`https://via.placeholder.com/${imgSrc.split('/')[3]}/${imgSrc.split('/')[4]}/FFFFFF/FFFFFF?text=&nbsp;`"
       alt=""
       :width="imgSrc.split('/')[3]"
       :height="imgSrc.split('/')[4]"
