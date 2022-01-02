@@ -59,5 +59,6 @@ export default {
   target: 'server',
   router: {
     base: '/'
-  }
+  },
+  modern: 'server'
 }
