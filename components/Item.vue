@@ -2,7 +2,7 @@
   <div class="item">
     <img
       
-      :src="`https://via.placeholder.com/${imgSrc.split('/')[3]}x${imgSrc.split('/')[4]}/FFFFFF/FFFFFF?text= `"
+      :src="`https://via.placeholder.com/${imgSrc.split('/')[3]}x${imgSrc.split('/')[4]}/D8D8D8/D8D8D8?text= `"
       alt=""
       :width="imgSrc.split('/')[3]"
       :height="imgSrc.split('/')[4]"
