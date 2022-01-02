@@ -1,7 +1,6 @@
 <template>
   <div class="heroHome">
     <b-carousel
-      v-show="!isOnMobile"
       id="carousel-1"
       :interval="4000"
       :fade="true"
@@ -20,7 +19,7 @@
         </div>
       </b-carousel-slide>
     </b-carousel>
-    <div class="header_mobile" v-show="isOnMobile">
+    <div class="header_mobile">
       <h1>{{ title }}</h1>
       <div class="header_mobile__links-wrapper">
         <nuxt-link
@@ -40,38 +39,21 @@ export default {
   name: "HeroHome",
   props: {
     title: {
-      type: String,
+      type: String
     },
     links: {
       type: Array,
-      required: true,
-    },
-  },
-  data() {
-    return {
-      isOnMobile: true,
-    };
-  },
-  methods: {
-    checkIfOnMobile() {
-      if (window.innerWidth > 768) {
-        this.isOnMobile = false;
-      } else {
-        this.isOnMobile = true;
-      }
-    },
-  },
-  beforeMount() {
-    window.addEventListener("resize", this.checkIfOnMobile);
-    this.checkIfOnMobile();
-  },
-  beforeUnmount() {
-    window.removeEventListener("resize", this.checkIfOnMobile);
-  },
+      required: true
+    }
+  }
 };
 </script>
 
 <style lang="scss" scoped>
+#carousel-1 {
+  display: none;
+}
+
 .heroHome {
   text-shadow: 1px 1px 2px #333;
   margin: auto;
@@ -140,6 +122,14 @@ a {
 }
 
 @media screen and (min-width: 768px) {
+  #carousel-1 {
+    display: block;
+  }
+
+  .header_mobile {
+    display: none;
+  }
+
   .heroHome {
     width: 100%;
   }
