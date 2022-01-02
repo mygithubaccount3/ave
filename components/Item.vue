@@ -4,8 +4,8 @@
       v-lazy="imgSrc"
       src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkqAcAAIUAgUW0RjgAAAAASUVORK5CYII="
       alt=""
-      :width="imgSrc.split('/')[1]"
-      :height="imgSrc.split('/')[2]"
+      :width="imgSrc.split('/')[3]"
+      :height="imgSrc.split('/')[4]"
     />
     <span class="price">{{ price }}</span>
     <fa :icon="faInfoCircle" color="white" class="infoIcon" />
