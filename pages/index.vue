@@ -17,7 +17,7 @@
         }
       ]"
     />
-    <Items />
+    <LazyItems />
     <div class="lookbooks_wrapper">
       <LazyLookbook
         v-for="item in lookbooks"
