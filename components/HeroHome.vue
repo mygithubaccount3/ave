@@ -9,12 +9,12 @@
       background="#ababab"
     >
       <b-carousel-slide v-for="link in links" :key="link.id">
-        <img
-          v-lazy="link.background"
-          src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkqAcAAIUAgUW0RjgAAAAASUVORK5CYII="
-          :alt="link.title"
-        />
         <div class="heroHome_wrapper">
+          <img
+            v-lazy="link.background"
+            src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkqAcAAIUAgUW0RjgAAAAASUVORK5CYII="
+            :alt="link.title"
+          />
           <h1>{{ title }}</h1>
           <nuxt-link :to="link.url">{{ link.title }}</nuxt-link>
         </div>
