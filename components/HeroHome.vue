@@ -12,6 +12,8 @@
         :key="link.id"
         :img-src="link.background"
         :img-alt="link.title"
+        :img-width="link.background.split('/')[3]"
+        :img-height="link.background.split('/')[4]"
       >
         <div class="heroHome_wrapper">
           <h1>{{ title }}</h1>
