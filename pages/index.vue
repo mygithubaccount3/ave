@@ -1,6 +1,6 @@
 <template>
   <div class="hero_wrapper">
-    <HeroHome
+    <lazy-HeroHome
       title="Ave"
       :links="[
         {
@@ -17,9 +17,9 @@
         }
       ]"
     />
-    <Items />
+    <lazy-Items />
     <div class="lookbooks_wrapper">
-      <Lookbook
+      <lazy-Lookbook
         v-for="item in lookbooks"
         :key="item.id"
         :title="item.title"
