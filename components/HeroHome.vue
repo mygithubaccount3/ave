@@ -141,7 +141,7 @@ a {
   a {
     align-self: flex-end;
     background-color: #575153;
-    color: #f8f8f8;
+    color: white;
   }
 }
 
