@@ -50,7 +50,7 @@ export default {
 .item {
   position: relative;
 
-  & img[lazy=loading] {
+  & img[lazy="loading"] {
     animation: spin 1s ease-in-out 0s infinite normal forwards;
   }
 }
