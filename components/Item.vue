@@ -68,7 +68,7 @@ export default {
   box-shadow: 0 0 24px rgba(0, 0, 0, 0.14);
 }
 
-.item:matches(.item:hover, .item > img[lazy="loaded"]) {
+.item:matches(.item:hover, img[lazy="loaded"]) {
   box-shadow: 0 0 24px rgba(0, 0, 0, 0.14);
 }
 
