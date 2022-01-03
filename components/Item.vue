@@ -1,7 +1,7 @@
 <template>
   <div class="item">
     <img
-    class="loading"
+      class="loading"
       v-lazy="imgSrc"
       :src="
         `https://via.placeholder.com/${imgSrc.split('/')[3]}x${
@@ -64,14 +64,14 @@ export default {
     border: 1px solid black;
     border-radius: 15px;
   }
+}
 
-  & img.loading {
-    display: none;
+img.loading {
+  display: none;
 
-    & .item__spinner {
-      display: block;
-      animation: rotate 2s;
-    }
+  & .item__spinner {
+    display: block;
+    animation: rotate 2s;
 
     @keyframes rotate {
       from {
