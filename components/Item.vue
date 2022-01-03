@@ -1,18 +1,12 @@
 <template>
   <div class="item">
     <img
-      class="loading"
       v-lazy="imgSrc"
-      :src="
-        `https://via.placeholder.com/${imgSrc.split('/')[3]}x${
-          imgSrc.split('/')[4]
-        }/D8D8D8/D8D8D8?text= `
-      "
+      :src="`https://via.placeholder.com/${imgSrc.split('/')[3]}x${imgSrc.split('/')[4]}/D8D8D8/D8D8D8?text= `"
       alt=""
       :width="imgSrc.split('/')[3]"
       :height="imgSrc.split('/')[4]"
     />
-    <div class="item__spinner"></div>
     <span class="price">{{ price }}</span>
     <fa :icon="faInfoCircle" color="white" class="infoIcon" />
     <div class="thumbs">
@@ -53,39 +47,10 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style>
 .item {
   position: relative;
-
-  &__spinner {
-    display: none;
-    width: 30px;
-    height: 30px;
-    border: 1px solid black;
-    border-radius: 15px;
-  }
 }
-
-img.loading {
-  display: none;
-
-  
-}
-
-img.loading .item__spinner {
-    display: block;
-    animation: rotate 2s;
-
-    @keyframes rotate {
-      from {
-        transform: rotate(0);
-      }
-
-      to {
-        transform: rotate(360);
-      }
-    }
-  }
 
 .item:hover {
   box-shadow: 0 0 24px rgba(0, 0, 0, 0.14);
