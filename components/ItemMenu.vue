@@ -64,8 +64,10 @@ export default {
         display: none;
         flex-direction: column;
         align-items: center;
+        align-self: flex-end;
         left: 0;
         right: 0;
+        bottom: -132px;
         padding-top: 21px;
         padding-bottom: 17px;
         padding-left: 55px;

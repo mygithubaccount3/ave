@@ -48,6 +48,9 @@ export default {
 
 <style lang="scss">
 .item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
 
   & img[lazy="loading"] {
