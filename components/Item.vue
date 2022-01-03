@@ -64,7 +64,7 @@ export default {
   }
 }
 
-img[lazy="loaded"].item:hover {
+img[lazy="loaded"] .item:hover {
   box-shadow: 0 0 24px rgba(0, 0, 0, 0.14);
 }
 
