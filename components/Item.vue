@@ -69,7 +69,10 @@ export default {
 img.loading {
   display: none;
 
-  & .item__spinner {
+  
+}
+
+img.loading .item__spinner {
     display: block;
     animation: rotate 2s;
 
@@ -83,7 +86,6 @@ img.loading {
       }
     }
   }
-}
 
 .item:hover {
   box-shadow: 0 0 24px rgba(0, 0, 0, 0.14);
