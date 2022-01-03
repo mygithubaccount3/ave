@@ -64,11 +64,11 @@ export default {
   }
 }
 
-.item > img[lazy="loaded"] .item:hover .item {
-  box-shadow: 0 0 24px rgba(0, 0, 0, 0.14);
-}
+// .item > img[lazy="loaded"] .item:hover .item {
+//   box-shadow: 0 0 24px rgba(0, 0, 0, 0.14);
+// }
 
-.item:matches(.item:hover, img[lazy="loaded"]) {
+.item:matches(:hover, img[lazy="loaded"]) {
   box-shadow: 0 0 24px rgba(0, 0, 0, 0.14);
 }
 
