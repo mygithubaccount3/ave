@@ -6,14 +6,16 @@
         :key="item.id"
         :class="item.hasOwnProperty('subitems') ? 'dropdown' : 'menu__item'"
       >
-        <a class="menu__link" :href="item.link">{{ item.title }}</a>
+        <nuxt-link class="menu__link" :to="item.link">{{
+          item.title
+        }}</nuxt-link>
         <ul class="dropdown_menu dropdown_menu--animated">
           <li
             v-for="subitem in item.subitems"
             :key="subitem.id"
             :class="'subitem' + subitem.id"
           >
-            <a :href="subitem.link">{{ subitem.title }}</a>
+            <nuxt-link :to="subitem.link">{{ subitem.title }}</nuxt-link>
           </li>
         </ul>
       </li>
@@ -50,19 +52,19 @@ export default {
             {
               id: 1,
               title: "Title 1",
-              link: "/1",
+              link: "/1"
             },
             {
               id: 2,
               title: "Title 2",
-              link: "/2",
+              link: "/2"
             },
             {
               id: 3,
               title: "Title 3",
-              link: "/3",
-            },
-          ],
+              link: "/3"
+            }
+          ]
         },
         {
           id: 4,
@@ -72,29 +74,29 @@ export default {
             {
               id: 5,
               title: "Title 4",
-              link: "/4",
+              link: "/4"
             },
             {
               id: 6,
               title: "Title 5",
-              link: "/5",
+              link: "/5"
             },
             {
               id: 7,
               title: "Title 6",
-              link: "/6",
-            },
-          ],
+              link: "/6"
+            }
+          ]
         },
         {
           id: 8,
           title: "The brand",
-          link: "/brand",
+          link: "/brand"
         },
         {
           id: 9,
           title: "Local stores",
-          link: "/stores",
+          link: "/stores"
         },
         {
           id: 10,
@@ -104,36 +106,36 @@ export default {
             {
               id: 11,
               title: "Title 7",
-              link: "/7",
+              link: "/7"
             },
             {
               id: 12,
               title: "Title 8",
-              link: "/8",
+              link: "/8"
             },
             {
               id: 13,
               title: "Title 9",
-              link: "/9",
-            },
-          ],
-        },
-      ],
+              link: "/9"
+            }
+          ]
+        }
+      ]
     };
   },
   components: {
     BIcon,
     BIconChevronBarDown,
-    BIconChevronBarUp,
+    BIconChevronBarUp
   },
   methods: {
-    mobileMenu: function () {
+    mobileMenu: function() {
       this.isMobileMenuOpened = !this.isMobileMenuOpened;
       document.querySelector("body").style.overflowY = this.isMobileMenuOpened
         ? "hidden"
         : "auto";
-    },
-  },
+    }
+  }
 };
 </script>
 
@@ -253,7 +255,7 @@ nav {
     width: 100%;
     border-radius: 0;
     text-align: center;
-    transition: .3s;
+    transition: 0.3s;
     box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
     z-index: 999;
     padding: 0;
