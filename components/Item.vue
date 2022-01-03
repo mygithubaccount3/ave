@@ -46,9 +46,13 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 .item {
   position: relative;
+
+  & img[lazy=loading] {
+    animation: spin 1s ease-in-out 0s infinite normal forwards;
+  }
 }
 
 .item:hover {
