@@ -52,6 +52,15 @@ export default {
 
   & img[lazy="loading"] {
     animation: spin 1s ease-in-out 0s infinite normal forwards;
+
+    @keyframes spin {
+      from {
+        transform: rotateZ(0);
+      }
+      to {
+        transform: rotateZ(360deg);
+      }
+    }
   }
 }
 
