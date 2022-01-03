@@ -15,7 +15,7 @@
       >
         <div class="heroHome_wrapper">
           <picture>
-            <source :srcSet="link.background + '.webp'" type="image/webp" />
+            <source :srcSet="'https://picsum.photos/2053/920.webp?image=275'" type="image/webp" />
             <img :src="link.background" :alt="link.title">
           </picture>
           <h1>{{ title }}</h1>
