@@ -51,6 +51,7 @@ export default {
   position: relative;
 
   & img[lazy="loading"] {
+    width: 10%;
     animation: spin 1s ease-in-out 0s infinite normal forwards;
 
     @keyframes spin {
@@ -64,17 +65,13 @@ export default {
   }
 }
 
-// .item > img[lazy="loaded"] .item:hover .item {
-//   box-shadow: 0 0 24px rgba(0, 0, 0, 0.14);
-// }
-
-.item:matches(:hover, img[lazy="loaded"]) {
+.item:hover {
   box-shadow: 0 0 24px rgba(0, 0, 0, 0.14);
 }
 
-.item:hover img[lazy="loaded"] .menu,
-.item:hover img[lazy="loaded"] .infoIcon,
-.item:hover img[lazy="loaded"] .thumbs {
+.item:hover .menu,
+.item:hover .infoIcon,
+.item:hover .thumbs {
   display: flex;
 }
 
