@@ -64,13 +64,13 @@ export default {
   }
 }
 
-.item:hover {
+img[lazy="loaded"].item:hover {
   box-shadow: 0 0 24px rgba(0, 0, 0, 0.14);
 }
 
-.item:hover .menu,
-.item:hover .infoIcon,
-.item:hover .thumbs {
+.item:hover img[lazy="loaded"] .menu,
+.item:hover img[lazy="loaded"] .infoIcon,
+.item:hover img[lazy="loaded"] .thumbs {
   display: flex;
 }
 
@@ -89,6 +89,7 @@ div .item:nth-of-type(2) {
 
 .item .price {
   color: #9a9a9a;
+  display: none;
   font-family: Montserrat;
   font-size: 21px;
   font-weight: 300;
