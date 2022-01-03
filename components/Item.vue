@@ -1,7 +1,7 @@
 <template>
   <div class="item">
     <img
-     
+      v-lazy="imgSrc"
       alt=""
       :width="imgSrc.split('/')[3]"
       :height="imgSrc.split('/')[4]"
@@ -124,7 +124,8 @@ div .item:nth-of-type(2) {
   flex-direction: column;
 }
 
-.thumbs img {
+.thumbs img,
+.thumbs img[lazy="loading"] {
   width: 100%;
   height: auto;
   margin-bottom: 10px;
