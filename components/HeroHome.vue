@@ -13,7 +13,7 @@
       >
         <div class="heroHome_wrapper">
           <picture style="position: absolute; top: 0; right: 0; bottom: 0; left: 0" :width="link.background.split('/')[3]" :height="link.background.split('/')[4]">
-            <source :srcSet="link.background + '.webp'" type="image/webp" />
+            <source :srcSet="'https://picsum.photos/2053/920.webp?image=275'" type="image/webp" />
             <img :src="link.background" :alt="link.title">
           </picture>
           <h1>{{ title }}</h1>
