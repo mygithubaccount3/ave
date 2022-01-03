@@ -1,7 +1,7 @@
 <template>
   <div class="item">
     <img
-      v-lazy="imgSrc"
+     
       alt=""
       :width="imgSrc.split('/')[3]"
       :height="imgSrc.split('/')[4]"
