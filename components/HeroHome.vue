@@ -64,7 +64,7 @@ export default {
   width: 80%;
 
   &_slider {
-    display: none;
+    display: none !important;
   }
 
   &_wrapper {
@@ -146,7 +146,7 @@ a {
     min-height: 330px;
 
     &_slider {
-      display: block;
+      display: block !important;
     }
   }
 
