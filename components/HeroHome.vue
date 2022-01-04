@@ -53,7 +53,7 @@ export default {
       required: true
     }
   },
-  components: { VueSlickCarousel }
+  components: { VueSlickCarousel },
 };
 </script>
 
