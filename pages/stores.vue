@@ -14,8 +14,8 @@
         <img
           :src="
             selectedStore
-              ? require('~/static/' + selectedStore.city.toLowerCase() + '.png?webp')
-              : require('~/static/' + stores[0].city.toLowerCase() + '.png?webp')
+              ? require('~/' + selectedStore.city.toLowerCase() + '.png?webp')
+              : require('~/' + stores[0].city.toLowerCase() + '.png?webp')
           "
           alt=""
         />
