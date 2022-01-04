@@ -23,7 +23,7 @@ export default {
 
 <style lang="scss" scoped>
 .wrapper {
-  background-image: url("https://picsum.photos/id/214/2000/1000");
+  background-image: url("https://picsum.photos/id/214/2000/1000.webp");
   background-size: cover;
   text-align: center;
   padding-top: 50px;
