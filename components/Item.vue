@@ -1,7 +1,8 @@
 <template>
   <div class="item">
     <img
-      v-lazy="imgSrc"
+      v-lazy="imgWebp"
+      :data-srcset="`${imgSrc}, ${imgWebp}`"
       alt=""
       :width="imgSrc.split('/')[3]"
       :height="imgSrc.split('/')[4]"
@@ -30,6 +31,10 @@ export default {
       type: String,
       required: true
     },
+    imgWebp: {
+      type: String,
+      required: true
+    },
     price: {
       type: String,
       required: true
@@ -52,6 +57,7 @@ export default {
   justify-content: center;
   align-items: center;
   position: relative;
+  min-height: 300px;
 
   & img[lazy="loading"] {
     width: 10%;

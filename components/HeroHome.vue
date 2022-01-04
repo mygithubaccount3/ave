@@ -1,28 +1,27 @@
 <template>
   <div class="heroHome">
-    <b-carousel
-      id="carousel-1"
-      :interval="4000"
+    <VueSlickCarousel
+      class="heroHome_slider"
+      :arrows="false"
+      :dots="true"
       :fade="true"
-      controls
-      background="#ababab"
+      :autoplay="true"
+      lazyLoad="progressive"
     >
-      <b-carousel-slide
-        v-for="link in links"
-        :key="link.id"
-        :img-width="link.background.split('/')[3]"
-        :img-height="link.background.split('/')[4]"
-      >
+      <div v-for="link in links" :key="link.id">
         <div class="heroHome_wrapper">
-          <picture>
-            <source :srcSet="'https://picsum.photos/2053/920.webp?image=275'" type="image/webp" />
-            <img :src="link.background" :alt="link.title">
-          </picture>
+          <img
+            class="heroHome_background"
+            :srcset="`${link.backgroundWebp}, ${link.background}`"
+            :alt="link.title"
+            :img-width="link.background.split('/')[3]"
+            :img-height="link.background.split('/')[4]"
+          />
           <h1>{{ title }}</h1>
           <nuxt-link :to="link.url">{{ link.title }}</nuxt-link>
         </div>
-      </b-carousel-slide>
-    </b-carousel>
+      </div>
+    </VueSlickCarousel>
     <div class="header_mobile">
       <h1>{{ title }}</h1>
       <div class="header_mobile__links-wrapper">
@@ -39,6 +38,10 @@
 </template>
 
 <script>
+import VueSlickCarousel from "vue-slick-carousel";
+import "vue-slick-carousel/dist/vue-slick-carousel.css";
+import "vue-slick-carousel/dist/vue-slick-carousel-theme.css";
+
 export default {
   name: "HeroHome",
   props: {
@@ -49,24 +52,32 @@ export default {
       type: Array,
       required: true
     }
-  }
+  },
+  components: { VueSlickCarousel }
 };
 </script>
 
 <style lang="scss" scoped>
-#carousel-1 {
-  display: none;
-}
-
 .heroHome {
   text-shadow: 1px 1px 2px #333;
   margin: auto;
   width: 80%;
 
+  &_slider {
+    display: none;
+  }
+
   &_wrapper {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    position: relative;
+    padding-bottom: 223.1521739130435px;
+  }
+
+  &_background {
+    position: absolute;
+    z-index: -99;
   }
 }
 
@@ -126,10 +137,6 @@ a {
 }
 
 @media screen and (min-width: 768px) {
-  #carousel-1 {
-    display: block;
-  }
-
   .header_mobile {
     display: none;
   }
@@ -137,6 +144,10 @@ a {
   .heroHome {
     width: 100%;
     min-height: 330px;
+
+    &_slider {
+      display: block;
+    }
   }
 
   h1 {

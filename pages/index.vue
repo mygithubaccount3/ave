@@ -7,13 +7,15 @@
           id: 1,
           title: 'Shop men\'s collection',
           url: '/men',
-          background: 'https://picsum.photos/2053/920/?image=275'
+          background: 'https://picsum.photos/2053/920/?image=275',
+          backgroundWebp: 'https://picsum.photos/2053/920.webp?image=275'
         },
         {
           id: 2,
           title: 'Shop women\'s collection',
           url: '/women',
-          background: 'https://picsum.photos/2053/920/?image=280'
+          background: 'https://picsum.photos/2053/920/?image=280',
+          backgroundWebp: 'https://picsum.photos/2053/920.webp?image=280'
         }
       ]"
     />
@@ -67,6 +69,14 @@ export default {
 </script>
 
 <style>
+.slick-next {
+  right: 0 !important;
+}
+
+.slick-prev {
+  left: 0 !important;
+  z-index: 1;
+}
 .page-enter-active,
 .page-leave-active {
   transition: opacity 0.5s;
