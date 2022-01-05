@@ -27,7 +27,7 @@ export default {
   components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: ["@nuxtjs/fontawesome"],
+  buildModules: ["@nuxtjs/fontawesome", "@nuxt/image"],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
@@ -35,8 +35,7 @@ export default {
     "bootstrap-vue/nuxt",
     // https://go.nuxtjs.dev/axios
     "@nuxtjs/axios",
-    "@aceforth/nuxt-optimized-images",
-    '@nuxt/image',
+    "@aceforth/nuxt-optimized-images"
   ],
 
   optimizedImages: {
@@ -51,13 +50,13 @@ export default {
       lg: 1024,
       xl: 1280,
       xxl: 1536,
-      '2xl': 1536
+      "2xl": 1536
     },
 
-    provider: 'ipx',
-    ipx: {},
+    // provider: "ipx",
+    // ipx: {}
 
-    // domains: ['picsum.photos'],/////change
+    domains: ['https://picsum.photos'],/////change
     // alias: {
     //   picsum: 'https://picsum.photos'
     // },
@@ -66,9 +65,9 @@ export default {
     // }
   },
 
-  serverMiddleware: {
-    '/_ipx': '~/server/middleware/ipx.js'
-  },
+  // serverMiddleware: {
+  //   "/_ipx": "~/server/middleware/ipx.js"
+  // },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
