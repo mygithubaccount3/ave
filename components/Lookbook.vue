@@ -1,8 +1,8 @@
 <template>
   <div class="lookbook">
     <img
-      :src="'assets' + imgSrc + '?webp'"
-      
+      v-lazy="require('@/static' + imgSrc + '?webp')"
+      src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkqAcAAIUAgUW0RjgAAAAASUVORK5CYII="
       alt="lookbook image"
       width="237"
       height="437"
