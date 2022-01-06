@@ -1,10 +1,13 @@
 <template>
-  <div class="item">
+  <div class="item" v-lazy-container="{ selector: 'img' }">
     <nuxt-img
       
-      src="https://picsum.photos/2053/920/?image=280"
+      :src="imgSrc"
       quality="100"
       format="webp"
+      grayscale="true"
+      sizes="sm:10vw md:50vw lg:100vw"
+      :modifiers="{ grayscale: true, tint: '#00DC82' }"
       
       alt=""
       :width="imgSrc.split('/')[3]"
