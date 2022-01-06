@@ -2,7 +2,7 @@
   <div class="item">
     <nuxt-img
       
-      src="picsum.photos/2053/920/?image=280"
+      src="/picsum/2053/920/?image=280"
       quality="10"
       format="webp"
       
