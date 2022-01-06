@@ -12,8 +12,7 @@
         <div class="heroHome_wrapper">
           <img
             class="heroHome_background"
-            v-lazy="link.backgroundWebp"
-            :data-srcset="`${link.backgroundWebp}, ${link.background}`"
+            :srcset="`${link.backgroundWebp}, ${link.background}`"
             :alt="link.title"
             :img-width="link.background.split('/')[3]"
             :img-height="link.background.split('/')[4]"
