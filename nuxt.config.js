@@ -27,7 +27,7 @@ export default {
   components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: ["@nuxtjs/fontawesome"],
+  buildModules: ["@nuxtjs/fontawesome", "@nuxt/image"],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
@@ -35,8 +35,7 @@ export default {
     "bootstrap-vue/nuxt",
     // https://go.nuxtjs.dev/axios
     "@nuxtjs/axios",
-    "@aceforth/nuxt-optimized-images",
-    "@nuxt/image"
+    "@aceforth/nuxt-optimized-images"
   ],
 
   optimizedImages: {
