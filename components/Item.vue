@@ -2,7 +2,7 @@
   <div class="item" v-lazy-container="{ selector: 'img' }">
     <nuxt-img
       
-      :src="imgSrc"
+      src="https://picsum.photos/100/70/?image=210"
       quality="100"
       format="webp"
       grayscale="true"
