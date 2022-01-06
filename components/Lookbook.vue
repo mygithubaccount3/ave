@@ -1,7 +1,7 @@
 <template>
   <div class="lookbook">
     <img
-      v-lazy="require('~assets' + imgSrc + '?webp').default"
+      v-lazy="require('@/static' + imgSrc + '?webp').default"
       
       alt="lookbook image"
       width="237"
