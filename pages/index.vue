@@ -21,14 +21,14 @@
     />
     <LazyItems />
     <div class="lookbooks_wrapper">
-      <LazyLookbook
-        v-for="item in lookbooks"
-        :key="item.id"
-        :title="item.title"
-        :description="item.description"
-        :url="item.url"
-        :imgSrc="item.imgSrc"
-      />
+      <picture>
+        <source data-srcset="~assets/ny.png?webp" type="image/webp" />
+        <img
+          data-src="~assets/paris.png"
+          
+          alt="Alternate text for the image"
+        />
+      </picture>
     </div>
   </div>
 </template>
