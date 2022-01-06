@@ -1,7 +1,7 @@
 <template>
   <div class="lookbook">
     <img
-      v-lazy="require('~/assets/silhouette.png?webp')"
+      v-lazy="require('~/assets/silhouette.png?format=webp')"
       src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkqAcAAIUAgUW0RjgAAAAASUVORK5CYII="
       alt="lookbook image"
       width="237"
