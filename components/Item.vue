@@ -1,15 +1,14 @@
 <template>
-  <div class="item">
+  <div class="item" v-lazy-container="{ selector: 'img' }">
     <nuxt-img
-      :src="imgSrc"
+      
+      src="https://picsum.photos/100/70/?image=210"
       quality="100"
       format="webp"
-      :sizes="
-        `sm:${imgSrc.split('/')[3] / 3}px md:${imgSrc.split('/')[3] / 2}px lg:${
-          imgSrc.split('/')[3]
-        }px`
-      "
+      grayscale="true"
+      sizes="sm:10vw md:50vw lg:100vw"
       :modifiers="{ grayscale: true, tint: '#00DC82' }"
+      
       alt=""
       :width="imgSrc.split('/')[3]"
       :height="imgSrc.split('/')[4]"
@@ -17,15 +16,11 @@
     <span class="price">{{ price }}</span>
     <fa :icon="faInfoCircle" color="white" class="infoIcon" />
     <div class="thumbs">
-      <nuxt-img
+      <img
         v-for="thumb in thumbs"
         :key="thumb.id"
         :src="thumb.src"
         :alt="thumb.title"
-        quality="100"
-        format="webp"
-        :sizes="`sm:50px md:70px lg:100px`"
-        lazy
       />
     </div>
     <ItemMenu title="this is a title" description="And this is a description" />
@@ -38,6 +33,10 @@ export default {
   name: "Item",
   props: {
     imgSrc: {
+      type: String,
+      required: true
+    },
+    imgWebp: {
       type: String,
       required: true
     },
@@ -63,6 +62,7 @@ export default {
   justify-content: center;
   align-items: center;
   position: relative;
+  min-height: 300px;
 
   & img[lazy="loading"] {
     width: 10%;

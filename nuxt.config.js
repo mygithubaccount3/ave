@@ -53,8 +53,21 @@ export default {
       "2xl": 1536
     },
 
-    domains: ['https://picsum.photos', 'https://images.unsplash.com'],
+    // provider: "ipx",
+    // ipx: {}
+
+    domains: ['https://picsum.photos'],/////change
+    // alias: {
+    //   picsum: 'https://picsum.photos'
+    // },
+    // vercel: {
+    //   baseURL: 'https://ave-nine.vercel.app/_vercel/image'
+    // }
   },
+
+  // serverMiddleware: {
+  //   "/_ipx": "~/server/middleware/ipx.js"
+  // },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
