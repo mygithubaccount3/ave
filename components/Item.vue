@@ -5,7 +5,6 @@
       src="https://picsum.photos/2053/920/?image=280"
       quality="10"
       format="webp"
-      provider="vercel"
       
       alt=""
       :width="imgSrc.split('/')[3]"
