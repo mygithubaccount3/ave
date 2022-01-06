@@ -17,7 +17,7 @@
               ? require(selectedStore.city.toLowerCase() + '.png?webp')
               : require(stores[0].city.toLowerCase() + '.png?webp')
           "
-          alt=''
+          alt=""
         />
       </div>
       <div>
