@@ -55,9 +55,6 @@ export default {
     },
 
     domains: ['picsum.photos'],/////change
-    alias: {
-      picsum: 'https://picsum.photos'
-    },
     vercel: {
       baseURL: 'https://ave-nine.vercel.app/_vercel/image'
     }
