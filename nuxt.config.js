@@ -54,7 +54,7 @@ export default {
       '2xl': 1536
     },
 
-    domains: ['https://nuxtjs.org']/////change
+    domains: ['https://picsum.photos']/////change
   },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
