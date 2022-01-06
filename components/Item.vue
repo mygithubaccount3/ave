@@ -3,7 +3,7 @@
     <nuxt-img
       
       :src="imgSrc"
-      quality="50"
+      quality="10"
       
       alt=""
       :width="imgSrc.split('/')[3]"
