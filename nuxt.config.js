@@ -54,9 +54,6 @@ export default {
       '2xl': 1536
     },
 
-    provider: 'ipx',
-    ipx: {},
-
     domains: ['picsum.photos'],/////change
     alias: {
       picsum: 'https://picsum.photos'
@@ -64,10 +61,6 @@ export default {
     vercel: {
       baseURL: 'https://ave-nine.vercel.app/_vercel/image'
     }
-  },
-
-  serverMiddleware: {
-    '/_ipx': '~/server/middleware/ipx.js'
   },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
