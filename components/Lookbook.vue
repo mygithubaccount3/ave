@@ -1,7 +1,7 @@
 <template>
   <div class="lookbook">
     <img
-      :src="require('~/assets' + imgSrc)"
+      :src="require(`~/assets${imgSrc}?webp`)"
       
       alt="lookbook image"
       width="237"
