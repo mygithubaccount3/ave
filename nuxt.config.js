@@ -54,7 +54,10 @@ export default {
       '2xl': 1536
     },
 
-    domains: ['https://picsum.photos']/////change
+    domains: ['https://picsum.photos'],/////change
+    vercel: {
+      baseURL: 'https://ave-nine.vercel.app/_vercel/image'
+    }
   },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
