@@ -2,8 +2,8 @@
   <div class="item">
     <nuxt-img
       
-      src="picsum.photos/2053/920/?image=280"
-      quality="10"
+      src="https://picsum.photos/2053/920/?image=280"
+      quality="100"
       format="webp"
       
       alt=""
