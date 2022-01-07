@@ -3,7 +3,7 @@
     <img
       v-lazy="require('~assets' + imgSrc + '?webp').default"
       
-      alt='lookbook image'
+      alt="lookbook image"
       width="237"
       height="437"
     />
