@@ -2,9 +2,9 @@
   <div class="item">
     <nuxt-img
       
-      src="https://picsum.photos/2053/920/?image=280"
+      :src="imgSrc"
       quality="10"
-      format="webp"
+      format="png"
       
       alt=""
       :width="imgSrc.split('/')[3]"
