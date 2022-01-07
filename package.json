@@ -27,6 +27,7 @@
     "fibers": "^5.0.0",
     "imagemin-mozjpeg": "^10.0.0",
     "imagemin-pngquant": "^9.0.2",
+    "imagemin-svgo": "^10.0.1",
     "sass": "^1.35.1",
     "sass-loader": "^10.2.0",
     "webp-loader": "^0.6.0",
