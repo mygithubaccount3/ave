@@ -13,7 +13,6 @@
       <div class="items_wrapper">
         <Item
           imgSrc="https://picsum.photos/420/500/?image=314"
-          imgWebp="https://picsum.photos/420/500.webp?image=314"
           price="20.47$"
           :thumbs="[{
             id: 1,
@@ -23,7 +22,6 @@
         />
         <Item
           imgSrc="https://picsum.photos/420/500/?image=317"
-          imgWebp="https://picsum.photos/420/500.webp?image=317"
           price="20.47$"
           :thumbs="[{
             id: 2,
@@ -33,7 +31,6 @@
         />
         <Item
           imgSrc="https://picsum.photos/870/704/?image=323"
-          imgWebp="https://picsum.photos/420/500.webp?image=323"
           price="20.47$"
           :thumbs="[{
             id: 3,
@@ -45,7 +42,6 @@
       <div class="items_wrapper">
         <Item
           imgSrc="https://picsum.photos/420/500/?image=350"
-          imgWebp="https://picsum.photos/420/500.webp?image=350"
           price="20.47$"
           :thumbs="[{
             id: 4,
@@ -55,7 +51,6 @@
         />
         <Item
           imgSrc="https://picsum.photos/420/500/?image=352"
-          imgWebp="https://picsum.photos/420/500.webp?image=352"
           price="20.47$"
           :thumbs="[{
             id: 5,
@@ -65,7 +60,6 @@
         />
         <Item
           imgSrc="https://picsum.photos/870/704/?image=327"
-          imgWebp="https://picsum.photos/420/500.webp?image=327"
           price="20.47$"
           :thumbs="[{
             id: 6,
