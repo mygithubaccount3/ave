@@ -19,8 +19,7 @@
       <img
         v-for="thumb in thumbs"
         :key="thumb.id"
-        src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkqAcAAIUAgUW0RjgAAAAASUVORK5CYII="
-        v-lazy="thumb.src"
+        :src="thumb.src"
         :alt="thumb.title"
       />
     </div>
