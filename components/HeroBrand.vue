@@ -1,8 +1,8 @@
 <template>
     <div class="brand_hero">
         <div>
-            <img src="https://picsum.photos/id/214/500/350" alt="">
-            <img src="https://picsum.photos/id/214/500/400" alt="">
+            <img src="https://picsum.photos/id/214/500/350.webp" alt="">
+            <img src="https://picsum.photos/id/214/500/400.webp" alt="">
             <h2>Our values, vision and strategy</h2>
             <p>The above image would be a great place for an advertising video</p>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem quae neque, eveniet ipsam dolorum illum impedit deleniti incidunt
@@ -17,7 +17,7 @@
                 inventore ab adipisci suscipit placeat tempora provident! Dicta unde, dignissimos rem aut magnam ex nobis! Eum perspiciatis
                 voluptates vel itaque expedita ipsum, illo qui. Ullam veritatis voluptate repellendus quibusdam earum expedita maxime enim amet
                 aperiam id quo numquam, iure facilis error neque sit deserunt dolorum!</p>
-                <img src="https://picsum.photos/id/214/500/350" alt="">
+                <img src="https://picsum.photos/id/214/500/350.webp" alt="">
             <h2>Ethical trading</h2>
             <p>We oversee the working conditions of the people in the supply chain</p>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem quae neque, eveniet ipsam dolorum illum impedit deleniti incidunt
