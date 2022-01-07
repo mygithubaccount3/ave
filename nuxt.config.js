@@ -35,11 +35,26 @@ export default {
     "bootstrap-vue/nuxt",
     // https://go.nuxtjs.dev/axios
     "@nuxtjs/axios",
-    "@aceforth/nuxt-optimized-images"
+    "@aceforth/nuxt-optimized-images",
+    '@nuxt/image',
   ],
 
   optimizedImages: {
     optimizeImages: true
+  },
+
+  image: {
+    screens: {
+      xs: 320,
+      sm: 640,
+      md: 768,
+      lg: 1024,
+      xl: 1280,
+      xxl: 1536,
+      '2xl': 1536
+    },
+
+    domains: ['https://nuxtjs.org']/////change
   },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
