@@ -4,6 +4,7 @@
       
       :src="imgSrc"
       quality="10"
+      format="png"
       
       alt=""
       :width="imgSrc.split('/')[3]"
