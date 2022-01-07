@@ -54,7 +54,7 @@ export default {
       '2xl': 1536
     },
 
-    domains: ['picsum.photos'],/////change
+    domains: ['https://picsum.photos'],/////change
     vercel: {
       baseURL: 'https://ave-nine.vercel.app/_vercel/image'
     }
