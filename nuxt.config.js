@@ -57,13 +57,13 @@ export default {
     provider: 'ipx',
     ipx: {},
 
-    // domains: ['picsum.photos'],/////change
-    // alias: {
-    //   picsum: 'https://picsum.photos'
-    // },
-    // vercel: {
-    //   baseURL: 'https://ave-nine.vercel.app/_vercel/image'
-    // }
+    domains: ['picsum.photos'],/////change
+    alias: {
+      picsum: 'https://picsum.photos'
+    },
+    vercel: {
+      baseURL: 'https://ave-nine.vercel.app/_vercel/image'
+    }
   },
 
   serverMiddleware: {

@@ -1,5 +1,8 @@
 import { createIPX, createIPXMiddleware } from "ipx";
+import config from "../../nuxt.config";
 
-export default createIPXMiddleware(createIPX({
-    domains: ["https://picsum.photos"]
-}));
+const {
+  image: { ipx: ipxConfig }
+} = config;
+
+export default createIPXMiddleware(createIPX(ipxConfig));
