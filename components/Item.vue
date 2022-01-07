@@ -1,10 +1,8 @@
 <template>
   <div class="item">
-    <nuxt-img
-      
-      :src="imgSrc"
-      quality="50"
-      
+    <img
+      v-lazy="imgWebp"
+      :data-srcset="`${imgSrc}, ${imgWebp}`"
       alt=""
       :width="imgSrc.split('/')[3]"
       :height="imgSrc.split('/')[4]"
