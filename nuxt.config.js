@@ -1,58 +1,61 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Ave',
+    title: "Ave",
     htmlAttrs: {
-      lang: 'en'
+      lang: "en"
     },
     meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Online clothing shop for men and women' }
+      { charset: "utf-8" },
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      {
+        hid: "description",
+        name: "description",
+        content: "Online clothing shop for men and women"
+      }
     ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [
-  ],
+  css: [],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [
-    '~/plugins/vue-lazyload.js'
-  ],
+  plugins: ["~/plugins/vue-lazyload.js"],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: [
-    '@nuxtjs/fontawesome',
-    '@aceforth/nuxt-optimized-images',
+  buildModules: ["@nuxtjs/fontawesome"],
+
+  // Modules: https://go.nuxtjs.dev/config-modules
+  modules: [
+    // https://go.nuxtjs.dev/bootstrap
+    "bootstrap-vue/nuxt",
+    // https://go.nuxtjs.dev/axios
+    "@nuxtjs/axios",
+    "@aceforth/nuxt-optimized-images"
   ],
 
   optimizedImages: {
     optimizeImages: true
   },
 
-  // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [
-    // https://go.nuxtjs.dev/bootstrap
-    'bootstrap-vue/nuxt',
-    // https://go.nuxtjs.dev/axios
-    '@nuxtjs/axios',
-  ],
-
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
 
   fontawesome: {
-    component: 'fa',
+    component: "fa",
     icons: {
-      solid: ['faSearch', 'faShoppingCart', 'faHeart', 'faCompressAlt', 'faInfoCircle'],
-      brands: ['faFacebookF', 'faTwitter', 'faInstagramSquare', 'faPinterest']
+      solid: [
+        "faSearch",
+        "faShoppingCart",
+        "faHeart",
+        "faCompressAlt",
+        "faInfoCircle"
+      ],
+      brands: ["faFacebookF", "faTwitter", "faInstagramSquare", "faPinterest"]
     }
   },
 
@@ -60,9 +63,9 @@ export default {
   build: {},
 
   ssr: true,
-  target: 'server',
+  target: "server",
   router: {
-    base: '/'
+    base: "/"
   },
-  modern: 'server'
-}
+  modern: "server"
+};
