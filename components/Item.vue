@@ -4,7 +4,7 @@
       
       :src="imgSrc"
       quality="50"
-      provider="vercel"
+      provider="ipx"
       alt=""
       :width="imgSrc.split('/')[3]"
       :height="imgSrc.split('/')[4]"
