@@ -11,14 +11,12 @@
     </div>
     <div class="store-info">
       <div id="map" ref="map">
-        <img
-          :src="
-            selectedStore
-              ? require('@/static/' + selectedStore.city.toLowerCase() + '.png?webp')
-              : require('@/static/' + stores[0].city.toLowerCase() + '.png?webp')
+        <img v-if="selectedStore"
+          :src="require('@/static/' + selectedStore.city.toLowerCase() + '.png?webp')
           "
           alt=""
         />
+        <img v-else :src="require('@/static/' + stores[0].city.toLowerCase() + '.png?webp')" />
       </div>
       <div>
         <div>
