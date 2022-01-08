@@ -1,14 +1,14 @@
 <template>
   <div class="items">
-    <div>
-      <b-nav>
-        <b-nav-item active>Popular</b-nav-item>
-        <b-nav-item>New arrivals</b-nav-item>
-        <b-nav-item>Best sellers</b-nav-item>
-        <b-nav-item>Special offers</b-nav-item>
-        <b-nav-item>Coming soon</b-nav-item>
-      </b-nav>
-    </div>
+    <nav class="items__nav">
+      <ul>
+        <li active>Popular</li>
+        <li>New arrivals</li>
+        <li>Best sellers</li>
+        <li>Special offers</li>
+        <li>Coming soon</li>
+      </ul>
+    </nav>
     <div class="items_content">
       <div class="items_wrapper">
         <Item
@@ -82,7 +82,7 @@
 export default {};
 </script>
 
-<style>
+<style lang="scss">
 .items {
   border-top: 1px solid #eeeeee;
   margin: auto;
@@ -91,6 +91,16 @@ export default {};
   padding-top: 54px;
   padding-bottom: 62px;
   width: 80%;
+
+  &__nav {
+    & ul {
+      padding-left: 0;
+      list-style-type: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+  }
 }
 
 .items_content {

@@ -12,7 +12,7 @@
       <div v-for="(link, index) in links" :key="link.id">
         <div
           :class="`heroHome_wrapper-${index}`"
-          :style="{ backgroundImage: 'url(' + link.backgroundWebp + ')' }"
+          v-lazy:background-image="link.backgroundWebp"
         >
           <h1>{{ title }}</h1>
           <nuxt-link :to="link.url" :class="`heroHome_link-${index}`">{{

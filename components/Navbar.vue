@@ -32,8 +32,6 @@
 </template>
 
 <script>
-import { BIcon, BIconChevronBarDown, BIconChevronBarUp } from "bootstrap-vue";
-
 export default {
   props: {
     // title: {
@@ -122,11 +120,6 @@ export default {
         }
       ]
     };
-  },
-  components: {
-    BIcon,
-    BIconChevronBarDown,
-    BIconChevronBarUp
   },
   methods: {
     mobileMenu: function() {

@@ -13,7 +13,6 @@
       <img
         v-for="thumb in thumbs"
         :key="thumb.id"
-        src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkqAcAAIUAgUW0RjgAAAAASUVORK5CYII="
         v-lazy="thumb.src"
         :alt="thumb.title"
       />
@@ -58,20 +57,6 @@ export default {
   align-items: center;
   position: relative;
   min-height: 300px;
-
-  & img[lazy="loading"] {
-    width: 10%;
-    animation: spin 1s ease-in-out 0s infinite normal forwards;
-
-    @keyframes spin {
-      from {
-        transform: rotateZ(0);
-      }
-      to {
-        transform: rotateZ(360deg);
-      }
-    }
-  }
 }
 
 .item:hover {
