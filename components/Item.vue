@@ -53,10 +53,7 @@ export default {
 <style lang="scss">
 .item {
   display: flex;
-  justify-content: center;
-  align-items: center;
   position: relative;
-  min-height: 300px;
 }
 
 .item:hover {
@@ -67,11 +64,6 @@ export default {
 .item:hover .infoIcon,
 .item:hover .thumbs {
   display: flex;
-}
-
-div .item:nth-of-type(1),
-div .item:nth-of-type(2) {
-  width: 49%;
 }
 
 .items_wrapper:first-of-type .item:nth-of-type(3) {
