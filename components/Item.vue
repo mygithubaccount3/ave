@@ -6,6 +6,7 @@
       alt=""
       :width="imgSrc.split('/')[3]"
       :height="imgSrc.split('/')[4]"
+      :style="{ maxWidth: imgSrc.split('/')[3] + 'px' }"
     />
     <span class="price">{{ price }}</span>
     <fa :icon="faInfoCircle" color="white" class="infoIcon" />

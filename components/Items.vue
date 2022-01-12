@@ -10,84 +10,88 @@
       </ul>
     </nav>
     <div class="items_content">
-      <Item
-        imgSrc="https://picsum.photos/420/500/?image=314"
-        imgWebp="https://picsum.photos/420/500.webp?image=314"
-        price="20.47$"
-        :thumbs="[
-          {
-            id: 1,
-            title: 'Thumb 1',
-            src:
-              'https://images.unsplash.com/photo-1621423028668-d5f9555ebea3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1868&q=80'
-          }
-        ]"
-      />
-      <Item
-        imgSrc="https://picsum.photos/420/500/?image=317"
-        imgWebp="https://picsum.photos/420/500.webp?image=317"
-        price="20.47$"
-        :thumbs="[
-          {
-            id: 2,
-            title: 'Thumb 2',
-            src:
-              'https://images.unsplash.com/photo-1621423028668-d5f9555ebea3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1868&q=80'
-          }
-        ]"
-      />
-      <Item
-        imgSrc="https://picsum.photos/870/704/?image=323"
-        imgWebp="https://picsum.photos/420/500.webp?image=323"
-        price="20.47$"
-        :thumbs="[
-          {
-            id: 3,
-            title: 'Thumb 3',
-            src:
-              'https://images.unsplash.com/photo-1621423028668-d5f9555ebea3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1868&q=80'
-          }
-        ]"
-      />
-      <Item
-        imgSrc="https://picsum.photos/420/500/?image=350"
-        imgWebp="https://picsum.photos/420/500.webp?image=350"
-        price="20.47$"
-        :thumbs="[
-          {
-            id: 4,
-            title: 'Thumb 4',
-            src:
-              'https://images.unsplash.com/photo-1621423028668-d5f9555ebea3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1868&q=80'
-          }
-        ]"
-      />
-      <Item
-        imgSrc="https://picsum.photos/420/500/?image=352"
-        imgWebp="https://picsum.photos/420/500.webp?image=352"
-        price="20.47$"
-        :thumbs="[
-          {
-            id: 5,
-            title: 'Thumb 5',
-            src:
-              'https://images.unsplash.com/photo-1621423028668-d5f9555ebea3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1868&q=80'
-          }
-        ]"
-      />
-      <Item
-        imgSrc="https://picsum.photos/870/704/?image=327"
-        imgWebp="https://picsum.photos/420/500.webp?image=327"
-        price="20.47$"
-        :thumbs="[
-          {
-            id: 6,
-            title: 'Thumb 6',
-            src:
-              'https://images.unsplash.com/photo-1621423028668-d5f9555ebea3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1868&q=80'
-          }
-        ]"
-      />
+      <div class="items_content_wrapper">
+        <Item
+          imgSrc="https://picsum.photos/420/500/?image=314"
+          imgWebp="https://picsum.photos/420/500.webp?image=314"
+          price="20.47$"
+          :thumbs="[
+            {
+              id: 1,
+              title: 'Thumb 1',
+              src:
+                'https://images.unsplash.com/photo-1621423028668-d5f9555ebea3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1868&q=80'
+            }
+          ]"
+        />
+        <Item
+          imgSrc="https://picsum.photos/420/500/?image=317"
+          imgWebp="https://picsum.photos/420/500.webp?image=317"
+          price="20.47$"
+          :thumbs="[
+            {
+              id: 2,
+              title: 'Thumb 2',
+              src:
+                'https://images.unsplash.com/photo-1621423028668-d5f9555ebea3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1868&q=80'
+            }
+          ]"
+        />
+        <Item
+          imgSrc="https://picsum.photos/760/500/?image=323"
+          imgWebp="https://picsum.photos/760/500.webp?image=323"
+          price="20.47$"
+          :thumbs="[
+            {
+              id: 3,
+              title: 'Thumb 3',
+              src:
+                'https://images.unsplash.com/photo-1621423028668-d5f9555ebea3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1868&q=80'
+            }
+          ]"
+        />
+      </div>
+      <div class="items_content_wrapper">
+        <Item
+          imgSrc="https://picsum.photos/760/500/?image=350"
+          imgWebp="https://picsum.photos/760/500.webp?image=350"
+          price="20.47$"
+          :thumbs="[
+            {
+              id: 4,
+              title: 'Thumb 4',
+              src:
+                'https://images.unsplash.com/photo-1621423028668-d5f9555ebea3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1868&q=80'
+            }
+          ]"
+        />
+        <Item
+          imgSrc="https://picsum.photos/420/500/?image=352"
+          imgWebp="https://picsum.photos/420/500.webp?image=352"
+          price="20.47$"
+          :thumbs="[
+            {
+              id: 5,
+              title: 'Thumb 5',
+              src:
+                'https://images.unsplash.com/photo-1621423028668-d5f9555ebea3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1868&q=80'
+            }
+          ]"
+        />
+        <Item
+          imgSrc="https://picsum.photos/420/500/?image=327"
+          imgWebp="https://picsum.photos/420/500.webp?image=327"
+          price="20.47$"
+          :thumbs="[
+            {
+              id: 6,
+              title: 'Thumb 6',
+              src:
+                'https://images.unsplash.com/photo-1621423028668-d5f9555ebea3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1868&q=80'
+            }
+          ]"
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -120,8 +124,16 @@ export default {};
 .items_content {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  column-gap: 10px;
-  row-gap: 10px;
+  grid-gap: 10px;
+
+  &_wrapper {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-areas:
+      "item"
+      "item"
+      "item";
+  }
 }
 
 .items a {
@@ -151,12 +163,34 @@ img {
 @media screen and (min-width: 480px) {
   .items_content {
     grid-template-columns: repeat(2, 1fr);
+
+    &_wrapper {
+      &:first-of-type {
+        grid-template-areas:
+          "top-item-left top-item-right"
+          "bottom-item bottom-item";
+
+        & .item:last-of-type {
+          grid-area: bottom-item;
+        }
+      }
+
+      &:last-of-type {
+        grid-template-areas:
+          "top-item top-item"
+          "bottom-item-left bottom-item-right";
+
+        & .item:first-of-type {
+          grid-area: top-item;
+        }
+      }
+    }
   }
 }
 
 @media screen and (min-width: 768px) {
   .items_content {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     min-height: 300px;
   }
 }
