@@ -1,5 +1,5 @@
 <template>
-  <div class="items">
+  <div class="items" id="items">
     <nav class="items__nav">
       <ul>
         <li active>Popular</li>
@@ -12,6 +12,7 @@
     <div class="items_content">
       <div class="items_content_wrapper">
         <Item
+          id=1
           imgSrc="https://picsum.photos/420/500/?image=314"
           imgWebp="https://picsum.photos/420/500.webp?image=314"
           price="20.47$"
@@ -25,6 +26,7 @@
           ]"
         />
         <Item
+          id=2
           imgSrc="https://picsum.photos/420/500/?image=317"
           imgWebp="https://picsum.photos/420/500.webp?image=317"
           price="20.47$"
@@ -38,6 +40,7 @@
           ]"
         />
         <Item
+          id=3
           imgSrc="https://picsum.photos/760/500/?image=323"
           imgWebp="https://picsum.photos/760/500.webp?image=323"
           price="20.47$"
@@ -53,6 +56,7 @@
       </div>
       <div class="items_content_wrapper">
         <Item
+          id=4
           imgSrc="https://picsum.photos/760/500/?image=350"
           imgWebp="https://picsum.photos/760/500.webp?image=350"
           price="20.47$"
@@ -66,6 +70,7 @@
           ]"
         />
         <Item
+          id=5
           imgSrc="https://picsum.photos/420/500/?image=352"
           imgWebp="https://picsum.photos/420/500.webp?image=352"
           price="20.47$"
@@ -79,6 +84,7 @@
           ]"
         />
         <Item
+          id=6
           imgSrc="https://picsum.photos/420/500/?image=327"
           imgWebp="https://picsum.photos/420/500.webp?image=327"
           price="20.47$"

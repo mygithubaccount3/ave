@@ -1,8 +1,7 @@
 <template>
-  <div class="item">
+  <div class="item" :id="`item${id}`">
     <img
-      v-lazy="imgWebp"
-      :data-srcset="`${imgSrc}, ${imgWebp}`"
+      :data-srcset="`${imgWebp}, ${imgSrc}`"
       alt=""
       :width="imgSrc.split('/')[3]"
       :height="imgSrc.split('/')[4]"
@@ -14,7 +13,7 @@
       <img
         v-for="thumb in thumbs"
         :key="thumb.id"
-        v-lazy="thumb.src"
+        :data-src="thumb.src"
         :alt="thumb.title"
       />
     </div>
@@ -27,6 +26,9 @@ import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 export default {
   name: "Item",
   props: {
+    id: {
+      type: String
+    },
     imgSrc: {
       type: String,
       required: true
@@ -47,6 +49,24 @@ export default {
     faInfoCircle() {
       return faInfoCircle;
     }
+  },
+  mounted() {
+    const image = document.querySelector(`#item${this.id}`);
+    const observer = new IntersectionObserver(function(entry) {
+      entry.forEach(item => {
+        if (item.isIntersecting) {
+          let picture = item.target.children[0];
+          const datasrcsetPicture = picture.getAttribute("data-srcset");
+          let thumb = item.target.children[3].children[0]
+          const datasrcThumb = thumb.getAttribute("data-src");
+          picture.setAttribute("srcset", datasrcsetPicture);
+          thumb.setAttribute("src", datasrcThumb);
+          this.unobserve(item.target);
+        }
+      });
+    });
+
+    observer.observe(image);
   }
 };
 </script>

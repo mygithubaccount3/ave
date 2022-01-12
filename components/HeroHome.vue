@@ -1,6 +1,7 @@
 <template>
   <div class="heroHome">
     <VueSlickCarousel
+      ref="carousel"
       class="heroHome_slider"
       :arrows="false"
       :dots="true"
@@ -12,7 +13,7 @@
       <div v-for="(link, index) in links" :key="link.id">
         <div
           :class="`heroHome_wrapper-${index}`"
-          v-lazy:background-image="link.backgroundWebp"
+          :style="`background-image: url(${link.backgroundWebp})`"
         >
           <h1>{{ title }}</h1>
           <nuxt-link :to="link.url" :class="`heroHome_link-${index}`">{{
@@ -40,7 +41,24 @@ export default {
       required: true
     }
   },
-  components: { VueSlickCarousel }
+  components: { VueSlickCarousel },
+  mounted() {
+    const herohome = document.querySelector(".heroHome");
+    let isLeaving = false;
+    const observer = new IntersectionObserver(entry => {
+      entry.forEach(item => {
+        if (item.isIntersecting) {
+          isLeaving = true;
+          this.$refs.carousel.play();
+        } else if (isLeaving) {
+          isLeaving = false;
+          this.$refs.carousel.pause();
+        }
+      });
+    });
+
+    observer.observe(herohome);
+  }
 };
 </script>
 

@@ -1,6 +1,6 @@
 <template>
   <div class="hero_wrapper">
-    <LazyHeroHome
+    <HeroHome
       title="Ave"
       :links="[
         {
@@ -19,16 +19,19 @@
         }
       ]"
     />
-    <LazyItems />
-    <div class="lookbooks_wrapper">
-      <LazyLookbook
+    <div id="items">
+      <component :is="loadedComponents.find(el => el === 'Items')"></component>
+    </div>
+    <div class="lookbooks_wrapper" id="lookbook">
+      <component
+        :is="loadedComponents.find(el => el === 'Lookbook')"
         v-for="item in lookbooks"
         :key="item.id"
         :title="item.title"
         :description="item.description"
         :url="item.url"
         :imgSrc="item.imgSrc"
-      />
+      ></component>
     </div>
   </div>
 </template>
@@ -62,8 +65,30 @@ export default {
           url: "/your",
           imgSrc: "/silhouette.png"
         }
-      ]
+      ],
+      loadedComponents: []
     };
+  },
+  mounted() {
+    const lookbook = document.querySelector("#lookbook");
+    const items = document.querySelector("#items");
+    const component = this;
+    const observer = new IntersectionObserver(function(entry) {
+      entry.forEach(item => {
+        if (item.isIntersecting) {
+          component.loadedComponents.push(
+            item.target
+              .getAttribute("id")
+              .charAt(0)
+              .toUpperCase() + item.target.getAttribute("id").slice(1)
+          );
+          this.unobserve(item.target);
+        }
+      });
+    });
+
+    observer.observe(lookbook);
+    observer.observe(items);
   }
 };
 </script>

@@ -1,11 +1,6 @@
 <template>
-  <div class="lookbook">
-    <img
-      v-lazy="imgSrc"
-      alt="lookbook image"
-      width="237"
-      height="437"
-    />
+  <div class="lookbook" :id="`lookbook${$vnode.key}`">
+    <img :data-src="imgSrc" alt="lookbook image" width="237" height="437" />
     <div class="text">
       <h2 class="title">{{ title }}</h2>
       <p class="description">{{ description }}</p>
@@ -34,6 +29,21 @@ export default {
       type: String,
       required: true
     }
+  },
+  mounted() {
+    const lookbook = document.querySelector(`#lookbook${this.$vnode.key}`);
+    const observer = new IntersectionObserver(function(entry) {
+      entry.forEach(item => {
+        if (item.isIntersecting) {
+          let img = item.target.children[0];
+          const datasrc = img.getAttribute("data-src");
+          img.setAttribute("src", datasrc);
+          this.unobserve(item.target);
+        }
+      });
+    });
+
+    observer.observe(lookbook);
   }
 };
 </script>
