@@ -65,7 +65,7 @@ export default {
 <style lang="scss" scoped>
 .heroHome {
   text-shadow: 1px 1px 2px #333;
-  min-height: 177px;
+  min-height: 220px;
 
   &_wrapper-1,
   &_wrapper-0 {
