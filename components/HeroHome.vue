@@ -65,7 +65,7 @@ export default {
 <style lang="scss" scoped>
 .heroHome {
   text-shadow: 1px 1px 2px #333;
-  margin-bottom: 30px;
+  min-height: 177px;
 
   &_wrapper-1,
   &_wrapper-0 {
@@ -132,7 +132,6 @@ h1 {
 @media screen and (min-width: 768px) {
   .heroHome {
     min-height: 330px;
-    margin-bottom: 0;
 
     &_link-0,
     &_link-1 {
