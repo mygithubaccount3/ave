@@ -7,15 +7,31 @@
           id: 1,
           title: 'Shop men\'s collection',
           url: '/men',
-          background: 'https://picsum.photos/2053/920/?image=275',
-          backgroundWebp: 'https://picsum.photos/2053/920.webp?image=275'
+          background: {
+            big: 'https://picsum.photos/2053/920/?image=275',
+            medium: 'https://picsum.photos/768/344/?image=275',
+            small: 'https://picsum.photos/480/215/?image=275'
+          },
+          backgroundWebp: {
+            big: 'https://picsum.photos/2053/920.webp?image=275',
+            medium: 'https://picsum.photos/768/344.webp?image=275',
+            small: 'https://picsum.photos/480/215.webp?image=275'
+          }
         },
         {
           id: 2,
           title: 'Shop women\'s collection',
           url: '/women',
-          background: 'https://picsum.photos/2053/920/?image=280',
-          backgroundWebp: 'https://picsum.photos/2053/920.webp?image=280'
+          background: {
+            big: 'https://picsum.photos/2053/920/?image=280',
+            medium: 'https://picsum.photos/768/344/?image=280',
+            small: 'https://picsum.photos/480/215/?image=280'
+          },
+          backgroundWebp: {
+            big: 'https://picsum.photos/2053/920.webp?image=280',
+            medium: 'https://picsum.photos/768/344.webp?image=280',
+            small: 'https://picsum.photos/480/215.webp?image=280'
+          }
         }
       ]"
     />
@@ -90,6 +106,10 @@ export default {
 </script>
 
 <style>
+.slick-slide img {
+  position: absolute;
+}
+
 .slick-next {
   right: 0 !important;
 }

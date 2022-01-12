@@ -13,8 +13,14 @@
       <div v-for="(link, index) in links" :key="link.id">
         <div
           :class="`heroHome_wrapper-${index}`"
-          :style="`background-image: url(${link.backgroundWebp})`"
         >
+          <img
+            :srcset="
+              `${link.backgroundWebp.small} 480w, ${link.backgroundWebp.medium} 768w, ${link.backgroundWebp.big} 2053w,`
+            "
+            sizes="(max-width: 768px) 768px, (max-width: 480px) 480px, (min-width: 769px) 2053px"
+            alt=""
+          />
           <h1>{{ title }}</h1>
           <nuxt-link :to="link.url" :class="`heroHome_link-${index}`">{{
             link.title
