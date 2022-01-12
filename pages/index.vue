@@ -19,9 +19,7 @@
         }
       ]"
     />
-    <div id="items">
-      <component :is="loadedComponents.find(el => el === 'Items')"></component>
-    </div>
+    <Items />
     <div class="lookbooks_wrapper" id="lookbook">
       <component
         :is="loadedComponents.find(el => el === 'Lookbook')"
@@ -71,7 +69,6 @@ export default {
   },
   mounted() {
     const lookbook = document.querySelector("#lookbook");
-    const items = document.querySelector("#items");
     const component = this;
     const observer = new IntersectionObserver(function(entry) {
       entry.forEach(item => {
@@ -88,7 +85,6 @@ export default {
     });
 
     observer.observe(lookbook);
-    observer.observe(items);
   }
 };
 </script>
