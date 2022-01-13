@@ -8,14 +8,20 @@
           title: 'Shop men\'s collection',
           url: '/men',
           background: {
-            big: 'https://picsum.photos/2053/920/?image=275',
-            medium: 'https://picsum.photos/768/344/?image=275',
-            small: 'https://picsum.photos/480/215/?image=275'
+            w2053: 'https://picsum.photos/2053/920/?image=275',
+            w1500: 'https://picsum.photos/1500/673/?image=275',
+            w1200: 'https://picsum.photos/1200/538/?image=275',
+            big: 'https://picsum.photos/900/404/?image=275',
+            medium: 'https://picsum.photos/600/269/?image=275',
+            small: 'https://picsum.photos/300/135/?image=275'
           },
           backgroundWebp: {
-            big: 'https://picsum.photos/2053/920.webp?image=275',
-            medium: 'https://picsum.photos/768/344.webp?image=275',
-            small: 'https://picsum.photos/480/215.webp?image=275'
+            w2053: 'https://picsum.photos/2053/920.webp?image=275',
+            w1500: 'https://picsum.photos/1500/673.webp?image=275',
+            w1200: 'https://picsum.photos/1200/538.webp?image=275',
+            big: 'https://picsum.photos/900/404.webp?image=275',
+            medium: 'https://picsum.photos/600/269.webp?image=275',
+            small: 'https://picsum.photos/300/135.webp?image=275'
           }
         },
         {
@@ -23,14 +29,20 @@
           title: 'Shop women\'s collection',
           url: '/women',
           background: {
-            big: 'https://picsum.photos/2053/920/?image=280',
-            medium: 'https://picsum.photos/768/344/?image=280',
-            small: 'https://picsum.photos/480/215/?image=280'
+            w2053: 'https://picsum.photos/2053/920/?image=280',
+            w1500: 'https://picsum.photos/1500/673/?image=280',
+            w1200: 'https://picsum.photos/1200/538/?image=280',
+            big: 'https://picsum.photos/900/404/?image=280',
+            medium: 'https://picsum.photos/600/269/?image=280',
+            small: 'https://picsum.photos/300/135/?image=280'
           },
           backgroundWebp: {
-            big: 'https://picsum.photos/2053/920.webp?image=280',
-            medium: 'https://picsum.photos/768/344.webp?image=280',
-            small: 'https://picsum.photos/480/215.webp?image=280'
+            w2053: 'https://picsum.photos/2053/920.webp?image=280',
+            w1500: 'https://picsum.photos/1500/673.webp?image=280',
+            w1200: 'https://picsum.photos/1200/538.webp?image=280',
+            big: 'https://picsum.photos/900/404.webp?image=280',
+            medium: 'https://picsum.photos/600/269.webp?image=280',
+            small: 'https://picsum.photos/300/135.webp?image=280'
           }
         }
       ]"

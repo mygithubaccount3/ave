@@ -11,14 +11,12 @@
       lazyLoad="progressive"
     >
       <div v-for="(link, index) in links" :key="link.id">
-        <div
-          :class="`heroHome_wrapper-${index}`"
-        >
+        <div :class="`heroHome_wrapper-${index}`">
           <img
             :srcset="
-              `${link.backgroundWebp.small} 480w, ${link.backgroundWebp.medium} 768w, ${link.backgroundWebp.big} 2053w,`
+              `${link.backgroundWebp.small} 300w, ${link.backgroundWebp.medium} 600w, ${link.backgroundWebp.big} 900w, ${link.backgroundWebp.w1200} 1200w, ${link.backgroundWebp.w1500} 1500w, ${link.backgroundWebp.w2053} 2053w`
             "
-            sizes="(max-width: 768px) 768px, (max-width: 480px) 480px, (min-width: 769px) 2053px"
+            sizes="100vw"
             alt=""
           />
           <h1>{{ title }}</h1>
