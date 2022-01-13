@@ -1,11 +1,19 @@
 <template>
   <div class="item" :id="`item${id}`">
     <img
-      :data-srcset="`${imgWebp}, ${imgSrc}`"
+      :data-srcset="
+        `${img.webp.small} 420w, ${
+          id === '3' || id === '4' ? img.webp.big + ' 760w,' : ''
+        } ${img.legacy.small} 420w, ${
+          id === '3' || id === '4' ? img.legacy.big + ' 760w' : ''
+        }`
+      "
       alt=""
-      :width="imgSrc.split('/')[3]"
-      :height="imgSrc.split('/')[4]"
-      :style="{ maxWidth: imgSrc.split('/')[3] + 'px' }"
+      :style="{
+        maxWidth:
+          img.legacy[id === '3' || id === '4' ? 'big' : 'small'].split('/')[3] +
+          'px'
+      }"
     />
     <span class="price">{{ price }}</span>
     <fa :icon="faInfoCircle" color="white" class="infoIcon" />
@@ -29,12 +37,8 @@ export default {
     id: {
       type: String
     },
-    imgSrc: {
-      type: String,
-      required: true
-    },
-    imgWebp: {
-      type: String,
+    img: {
+      type: Object,
       required: true
     },
     price: {
@@ -57,7 +61,7 @@ export default {
         if (item.isIntersecting) {
           let picture = item.target.children[0];
           const datasrcsetPicture = picture.getAttribute("data-srcset");
-          let thumb = item.target.children[3].children[0]
+          let thumb = item.target.children[3].children[0];
           const datasrcThumb = thumb.getAttribute("data-src");
           picture.setAttribute("srcset", datasrcsetPicture);
           thumb.setAttribute("src", datasrcThumb);

@@ -12,9 +12,15 @@
     <div class="items_content">
       <div class="items_content_wrapper">
         <Item
-          id=1
-          imgSrc="https://picsum.photos/420/500/?image=314"
-          imgWebp="https://picsum.photos/420/500.webp?image=314"
+          id="1"
+          :img="{
+            webp: {
+              small: 'https://picsum.photos/420/500.webp?image=314'
+            },
+            legacy: {
+              small: 'https://picsum.photos/420/500/?image=314'
+            }
+          }"
           price="20.47$"
           :thumbs="[
             {
@@ -26,9 +32,15 @@
           ]"
         />
         <Item
-          id=2
-          imgSrc="https://picsum.photos/420/500/?image=317"
-          imgWebp="https://picsum.photos/420/500.webp?image=317"
+          id="2"
+          :img="{
+            webp: {
+              small: 'https://picsum.photos/420/500.webp?image=317'
+            },
+            legacy: {
+              small: 'https://picsum.photos/420/500/?image=317'
+            }
+          }"
           price="20.47$"
           :thumbs="[
             {
@@ -40,9 +52,17 @@
           ]"
         />
         <Item
-          id=3
-          imgSrc="https://picsum.photos/760/500/?image=323"
-          imgWebp="https://picsum.photos/760/500.webp?image=323"
+          id="3"
+          :img="{
+            webp: {
+              big: 'https://picsum.photos/760/500.webp?image=323',
+              small: 'https://picsum.photos/420/277.webp?image=323'
+            },
+            legacy: {
+              big: 'https://picsum.photos/760/500/?image=323',
+              small: 'https://picsum.photos/420/277?image=323'
+            }
+          }"
           price="20.47$"
           :thumbs="[
             {
@@ -56,9 +76,17 @@
       </div>
       <div class="items_content_wrapper">
         <Item
-          id=4
-          imgSrc="https://picsum.photos/760/500/?image=350"
-          imgWebp="https://picsum.photos/760/500.webp?image=350"
+          id="4"
+          :img="{
+            webp: {
+              big: 'https://picsum.photos/760/500.webp?image=350',
+              small: 'https://picsum.photos/420/277.webp?image=350'
+            },
+            legacy: {
+              big: 'https://picsum.photos/760/500/?image=350',
+              small: 'https://picsum.photos/420/277?image=350'
+            }
+          }"
           price="20.47$"
           :thumbs="[
             {
@@ -70,9 +98,15 @@
           ]"
         />
         <Item
-          id=5
-          imgSrc="https://picsum.photos/420/500/?image=352"
-          imgWebp="https://picsum.photos/420/500.webp?image=352"
+          id="5"
+          :img="{
+            webp: {
+              small: 'https://picsum.photos/420/500.webp?image=352'
+            },
+            legacy: {
+              small: 'https://picsum.photos/420/500/?image=352'
+            }
+          }"
           price="20.47$"
           :thumbs="[
             {
@@ -84,9 +118,15 @@
           ]"
         />
         <Item
-          id=6
-          imgSrc="https://picsum.photos/420/500/?image=327"
-          imgWebp="https://picsum.photos/420/500.webp?image=327"
+          id="6"
+          :img="{
+            webp: {
+              small: 'https://picsum.photos/420/500.webp?image=327'
+            },
+            legacy: {
+              small: 'https://picsum.photos/420/500/?image=327'
+            }
+          }"
           price="20.47$"
           :thumbs="[
             {
