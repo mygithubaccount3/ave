@@ -179,6 +179,14 @@ export default {};
       "item"
       "item"
       "item";
+
+      & > div {
+        min-height: 170px;
+      }
+
+      &:first-of-type > div:not(:nth-of-type(3)), &:last-of-type > div:not(:nth-of-type(1)) {
+        min-height: 300px;
+      }
   }
 }
 
@@ -237,7 +245,10 @@ img {
 @media screen and (min-width: 768px) {
   .items_content {
     grid-template-columns: repeat(2, 1fr);
-    min-height: 300px;
+
+    &_wrapper > div {
+      min-height: 300px;
+    }
   }
 }
 </style>

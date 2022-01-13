@@ -12,6 +12,9 @@
       :style="{
         maxWidth:
           img.legacy[id === '3' || id === '4' ? 'big' : 'small'].split('/')[3] +
+          'px',
+        maxHeight:
+          img.legacy[id === '3' || id === '4' ? 'big' : 'small'].split('/')[4] +
           'px'
       }"
     />
