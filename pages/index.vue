@@ -97,17 +97,16 @@ export default {
   },
   mounted() {
     const lookbook = document.querySelector("#lookbook");
-    const component = this;
-    const observer = new IntersectionObserver(function(entry) {
+    const observer = new IntersectionObserver((entry, observer) => {
       entry.forEach(item => {
         if (item.isIntersecting) {
-          component.loadedComponents.push(
+          this.loadedComponents.push(
             item.target
               .getAttribute("id")
               .charAt(0)
               .toUpperCase() + item.target.getAttribute("id").slice(1)
           );
-          this.unobserve(item.target);
+          observer.unobserve(item.target);
         }
       });
     });

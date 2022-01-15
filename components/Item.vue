@@ -1,23 +1,6 @@
 <template>
-  <div class="item" :id="`item${id}`">
-    <img
-      :data-srcset="
-        `${img.webp.small} 420w, ${
-          id === '3' || id === '4' ? img.webp.big + ' 760w,' : ''
-        } ${img.legacy.small} 420w, ${
-          id === '3' || id === '4' ? img.legacy.big + ' 760w' : ''
-        }`
-      "
-      alt=""
-      :style="{
-        maxWidth:
-          img.legacy[id === '3' || id === '4' ? 'big' : 'small'].split('/')[3] +
-          'px',
-        maxHeight:
-          img.legacy[id === '3' || id === '4' ? 'big' : 'small'].split('/')[4] +
-          'px'
-      }"
-    />
+  <div class="item" :ref="`item${id}`">
+    <img :srcset="pictureSrcSet" :src="img.legacy.big" alt="" :style="style" />
     <span class="price">{{ price }}</span>
     <fa :icon="faInfoCircle" color="white" class="infoIcon" />
     <div class="thumbs">
@@ -55,20 +38,36 @@ export default {
   computed: {
     faInfoCircle() {
       return faInfoCircle;
+    },
+    srcset() {
+      return `${this.img.webp.small} 420w, ${
+        this.id === "3" || this.id === "4" ? this.img.webp.big + " 760w," : ""
+      } ${this.img.legacy.small} 420w, ${
+        this.id === "3" || this.id === "4" ? this.img.legacy.big + " 760w" : ""
+      }`;
+    },
+    style() {
+      const size = this.id === "3" || this.id === "4" ? "big" : "small";
+
+      return {
+        maxWidth: this.img.legacy[size].split("/")[3] + "px",
+        maxHeight: this.img.legacy[size].split("/")[4] + "px"
+      };
     }
   },
+  data() {
+    return { pictureSrcSet: "" };
+  },
   mounted() {
-    const image = document.querySelector(`#item${this.id}`);
-    const observer = new IntersectionObserver(function(entry) {
+    const image = this.$refs[`item${this.id}`];
+    const observer = new IntersectionObserver((entry, observer) => {
       entry.forEach(item => {
         if (item.isIntersecting) {
-          let picture = item.target.children[0];
-          const datasrcsetPicture = picture.getAttribute("data-srcset");
+          this.pictureSrcSet = this.srcset;
           let thumb = item.target.children[3].children[0];
           const datasrcThumb = thumb.getAttribute("data-src");
-          picture.setAttribute("srcset", datasrcsetPicture);
           thumb.setAttribute("src", datasrcThumb);
-          this.unobserve(item.target);
+          observer.unobserve(item.target);
         }
       });
     });

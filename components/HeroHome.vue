@@ -1,5 +1,5 @@
 <template>
-  <div class="heroHome">
+  <div class="heroHome" ref="heroHome">
     <VueSlickCarousel
       ref="carousel"
       class="heroHome_slider"
@@ -17,7 +17,7 @@
               `${link.backgroundWebp.small} 300w, ${link.backgroundWebp.medium} 600w, ${link.backgroundWebp.big} 900w, ${link.backgroundWebp.w1200} 1200w, ${link.backgroundWebp.w1500} 1500w, ${link.backgroundWebp.w2053} 2053w`
             "
             sizes="100vw"
-            alt=""
+            :alt="link.title"
           />
           <h1>{{ title }}</h1>
           <nuxt-link :to="link.url" :class="`heroHome_link-${index}`">{{
@@ -47,7 +47,7 @@ export default {
   },
   components: { VueSlickCarousel },
   mounted() {
-    const herohome = document.querySelector(".heroHome");
+    const heroHome = this.$refs.heroHome;
     let isLeaving = false;
     const observer = new IntersectionObserver(entry => {
       entry.forEach(item => {
@@ -61,7 +61,7 @@ export default {
       });
     });
 
-    observer.observe(herohome);
+    observer.observe(heroHome);
   }
 };
 </script>
