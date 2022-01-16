@@ -1,13 +1,32 @@
 <template>
   <div class="item" :ref="`item${id}`">
-    <img :srcset="pictureSrcSet" :src="img.legacy.big" alt="" :style="style" />
+    <img
+      v-lazy:srcset="
+        `${this.img.webp.small} 420w, ${
+          this.id === '3' || this.id === '4' ? this.img.webp.big + ' 760w,' : ''
+        } ${this.img.legacy.small} 420w, ${
+          this.id === '3' || this.id === '4'
+            ? this.img.legacy.big + ' 760w'
+            : ''
+        }`
+      "
+      v-lazy:src="
+        `${
+          this.id === '3' || this.id === '4'
+            ? this.img.legacy.big
+            : this.img.legacy.small
+        }`
+      "
+      alt=""
+      :style="style"
+    />
     <span class="price">{{ price }}</span>
     <fa :icon="faInfoCircle" color="white" class="infoIcon" />
     <div class="thumbs">
       <img
         v-for="thumb in thumbs"
         :key="thumb.id"
-        :data-src="thumb.src"
+        v-lazy:src="thumb.src"
         :alt="thumb.title"
       />
     </div>
@@ -39,13 +58,6 @@ export default {
     faInfoCircle() {
       return faInfoCircle;
     },
-    srcset() {
-      return `${this.img.webp.small} 420w, ${
-        this.id === "3" || this.id === "4" ? this.img.webp.big + " 760w," : ""
-      } ${this.img.legacy.small} 420w, ${
-        this.id === "3" || this.id === "4" ? this.img.legacy.big + " 760w" : ""
-      }`;
-    },
     style() {
       const size = this.id === "3" || this.id === "4" ? "big" : "small";
 
@@ -54,25 +66,6 @@ export default {
         maxHeight: this.img.legacy[size].split("/")[4] + "px"
       };
     }
-  },
-  data() {
-    return { pictureSrcSet: "" };
-  },
-  mounted() {
-    const image = this.$refs[`item${this.id}`];
-    const observer = new IntersectionObserver((entry, observer) => {
-      entry.forEach(item => {
-        if (item.isIntersecting) {
-          this.pictureSrcSet = this.srcset;
-          let thumb = item.target.children[3].children[0];
-          const datasrcThumb = thumb.getAttribute("data-src");
-          thumb.setAttribute("src", datasrcThumb);
-          observer.unobserve(item.target);
-        }
-      });
-    });
-
-    observer.observe(image);
   }
 };
 </script>

@@ -48,16 +48,18 @@
       ]"
     />
     <Items />
-    <div class="lookbooks_wrapper" id="lookbook">
-      <component
-        :is="loadedComponents.find(el => el === 'Lookbook')"
-        v-for="item in lookbooks"
-        :key="item.id"
-        :title="item.title"
-        :description="item.description"
-        :url="item.url"
-        :imgSrc="item.imgSrc"
-      ></component>
+    <div class="lookbooks_wrapper">
+      <div v-lazy:component="'Lookbook'">
+        <component
+          :is="loadedComponents.find(el => el === 'Lookbook')"
+          v-for="item in lookbooks"
+          :key="item.id"
+          :title="item.title"
+          :description="item.description"
+          :url="item.url"
+          :imgSrc="item.imgSrc"
+        ></component>
+      </div>
     </div>
   </div>
 </template>
@@ -94,24 +96,6 @@ export default {
       ],
       loadedComponents: []
     };
-  },
-  mounted() {
-    const lookbook = document.querySelector("#lookbook");
-    const observer = new IntersectionObserver((entry, observer) => {
-      entry.forEach(item => {
-        if (item.isIntersecting) {
-          this.loadedComponents.push(
-            item.target
-              .getAttribute("id")
-              .charAt(0)
-              .toUpperCase() + item.target.getAttribute("id").slice(1)
-          );
-          observer.unobserve(item.target);
-        }
-      });
-    });
-
-    observer.observe(lookbook);
   }
 };
 </script>
@@ -142,7 +126,7 @@ export default {
   padding-top: 29px;
 }
 
-.lookbooks_wrapper {
+.lookbooks_wrapper > div {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -157,7 +141,7 @@ export default {
     padding-top: 85px;
   }
 
-  .lookbooks_wrapper {
+  .lookbooks_wrapper > div {
     flex-direction: row;
   }
 }

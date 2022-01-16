@@ -17,6 +17,7 @@
               `${link.backgroundWebp.small} 300w, ${link.backgroundWebp.medium} 600w, ${link.backgroundWebp.big} 900w, ${link.backgroundWebp.w1200} 1200w, ${link.backgroundWebp.w1500} 1500w, ${link.backgroundWebp.w2053} 2053w`
             "
             sizes="100vw"
+            :src="link.background.big"
             :alt="link.title"
           />
           <h1>{{ title }}</h1>
