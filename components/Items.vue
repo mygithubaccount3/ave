@@ -10,19 +10,13 @@
       </ul>
     </nav>
     <div class="items_content">
-      <div class="items_content_wrapper">
+      <div
+        class="items_content_wrapper"
+        v-for="i in Math.ceil(items.length / 3)"
+        :key="i"
+      >
         <Item
-          v-for="item in items.slice(0, 3)"
-          :key="item.id"
-          :id="item.id"
-          :img="item.img"
-          :price="item.price"
-          :thumbs="item.thumbs"
-        />
-      </div>
-      <div class="items_content_wrapper">
-        <Item
-          v-for="item in items.slice(3)"
+          v-for="item in items.slice((i - 1) * 3, i * 3)"
           :key="item.id"
           :id="item.id"
           :img="item.img"
