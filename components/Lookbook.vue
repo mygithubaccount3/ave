@@ -1,6 +1,12 @@
 <template>
   <div class="lookbook">
-    <img v-lazy:src="imgSrc" alt="lookbook image" width="237" height="437" />
+    <img
+      v-lazy:src="imgSrc"
+      src="/image_lightgrey_24dp.svg"
+      alt="lookbook image"
+      width="237"
+      height="437"
+    />
     <div class="text">
       <h2 class="title">{{ title }}</h2>
       <p class="description">{{ description }}</p>

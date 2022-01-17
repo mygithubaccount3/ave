@@ -17,6 +17,7 @@
             : this.img.legacy.small
         }`
       "
+      src="/image_lightgrey_24dp.svg"
       alt=""
       :style="style"
     />
@@ -27,6 +28,7 @@
         v-for="thumb in thumbs"
         :key="thumb.id"
         v-lazy:src="thumb.src"
+        src="/image_lightgrey_24dp.svg"
         :alt="thumb.title"
       />
     </div>
