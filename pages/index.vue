@@ -1,52 +1,6 @@
 <template>
   <div class="hero_wrapper">
-    <HeroHome
-      title="Ave"
-      :links="[
-        {
-          id: 1,
-          title: 'Shop men\'s collection',
-          url: '/men',
-          background: {
-            w2053: 'https://picsum.photos/2053/920/?image=275',
-            w1500: 'https://picsum.photos/1500/673/?image=275',
-            w1200: 'https://picsum.photos/1200/538/?image=275',
-            big: 'https://picsum.photos/900/404/?image=275',
-            medium: 'https://picsum.photos/600/269/?image=275',
-            small: 'https://picsum.photos/300/135/?image=275'
-          },
-          backgroundWebp: {
-            w2053: 'https://picsum.photos/2053/920.webp?image=275',
-            w1500: 'https://picsum.photos/1500/673.webp?image=275',
-            w1200: 'https://picsum.photos/1200/538.webp?image=275',
-            big: 'https://picsum.photos/900/404.webp?image=275',
-            medium: 'https://picsum.photos/600/269.webp?image=275',
-            small: 'https://picsum.photos/300/135.webp?image=275'
-          }
-        },
-        {
-          id: 2,
-          title: 'Shop women\'s collection',
-          url: '/women',
-          background: {
-            w2053: 'https://picsum.photos/2053/920/?image=280',
-            w1500: 'https://picsum.photos/1500/673/?image=280',
-            w1200: 'https://picsum.photos/1200/538/?image=280',
-            big: 'https://picsum.photos/900/404/?image=280',
-            medium: 'https://picsum.photos/600/269/?image=280',
-            small: 'https://picsum.photos/300/135/?image=280'
-          },
-          backgroundWebp: {
-            w2053: 'https://picsum.photos/2053/920.webp?image=280',
-            w1500: 'https://picsum.photos/1500/673.webp?image=280',
-            w1200: 'https://picsum.photos/1200/538.webp?image=280',
-            big: 'https://picsum.photos/900/404.webp?image=280',
-            medium: 'https://picsum.photos/600/269.webp?image=280',
-            small: 'https://picsum.photos/300/135.webp?image=280'
-          }
-        }
-      ]"
-    />
+    <HeroHome title="Ave" :links="links" />
     <Items />
     <div class="lookbooks_wrapper">
       <div v-lazy:component="'Lookbook'">
@@ -68,34 +22,16 @@
 export default {
   asyncData() {
     return {
-      lookbooks: [
-        {
-          id: 1,
-          title: "Men's lookbook",
-          description:
-            "Lorem ipsum dolor sit amet eras facilisis consectetur adipiscing elit lor, integer lorem consecteur dignissim laciniqui. Elementum metus facilisis ut phasellu.",
-          url: "/men",
-          imgSrc: "/silhouette.png"
-        },
-        {
-          id: 2,
-          title: "Women's lookbook",
-          description:
-            "Pellentesque habitant morbi tristique senectus et netus et malesuada fames . Pellentesque laoreet quis enim et mattis. Quisque interdum felis tellus.",
-          url: "/women",
-          imgSrc: "/silhouette.png"
-        },
-        {
-          id: 3,
-          title: "Your lookbook",
-          description:
-            "See an item you like and click the  button to add it to your lookbook where you can create your own perfect look. It’s like your own boutique!",
-          url: "/your",
-          imgSrc: "/silhouette.png"
-        }
-      ],
       loadedComponents: []
     };
+  },
+  computed: {
+    lookbooks() {
+      return this.$store.state.lookbooks;
+    },
+    links() {
+      return this.$store.state.links;
+    }
   }
 };
 </script>

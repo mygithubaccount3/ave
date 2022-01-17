@@ -12,130 +12,22 @@
     <div class="items_content">
       <div class="items_content_wrapper">
         <Item
-          id="1"
-          :img="{
-            webp: {
-              small: 'https://picsum.photos/420/500.webp?image=314'
-            },
-            legacy: {
-              small: 'https://picsum.photos/420/500/?image=314'
-            }
-          }"
-          price="20.47$"
-          :thumbs="[
-            {
-              id: 1,
-              title: 'Thumb 1',
-              src:
-                'https://images.unsplash.com/photo-1621423028668-d5f9555ebea3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1868&q=80'
-            }
-          ]"
-        />
-        <Item
-          id="2"
-          :img="{
-            webp: {
-              small: 'https://picsum.photos/420/500.webp?image=317'
-            },
-            legacy: {
-              small: 'https://picsum.photos/420/500/?image=317'
-            }
-          }"
-          price="20.47$"
-          :thumbs="[
-            {
-              id: 2,
-              title: 'Thumb 2',
-              src:
-                'https://images.unsplash.com/photo-1621423028668-d5f9555ebea3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1868&q=80'
-            }
-          ]"
-        />
-        <Item
-          id="3"
-          :img="{
-            webp: {
-              big: 'https://picsum.photos/760/500.webp?image=323',
-              small: 'https://picsum.photos/420/277.webp?image=323'
-            },
-            legacy: {
-              big: 'https://picsum.photos/760/500/?image=323',
-              small: 'https://picsum.photos/420/277?image=323'
-            }
-          }"
-          price="20.47$"
-          :thumbs="[
-            {
-              id: 3,
-              title: 'Thumb 3',
-              src:
-                'https://images.unsplash.com/photo-1621423028668-d5f9555ebea3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1868&q=80'
-            }
-          ]"
+          v-for="item in items.slice(0, 3)"
+          :key="item.id"
+          :id="item.id"
+          :img="item.img"
+          :price="item.price"
+          :thumbs="item.thumbs"
         />
       </div>
       <div class="items_content_wrapper">
         <Item
-          id="4"
-          :img="{
-            webp: {
-              big: 'https://picsum.photos/760/500.webp?image=350',
-              small: 'https://picsum.photos/420/277.webp?image=350'
-            },
-            legacy: {
-              big: 'https://picsum.photos/760/500/?image=350',
-              small: 'https://picsum.photos/420/277?image=350'
-            }
-          }"
-          price="20.47$"
-          :thumbs="[
-            {
-              id: 4,
-              title: 'Thumb 4',
-              src:
-                'https://images.unsplash.com/photo-1621423028668-d5f9555ebea3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1868&q=80'
-            }
-          ]"
-        />
-        <Item
-          id="5"
-          :img="{
-            webp: {
-              small: 'https://picsum.photos/420/500.webp?image=352'
-            },
-            legacy: {
-              small: 'https://picsum.photos/420/500/?image=352'
-            }
-          }"
-          price="20.47$"
-          :thumbs="[
-            {
-              id: 5,
-              title: 'Thumb 5',
-              src:
-                'https://images.unsplash.com/photo-1621423028668-d5f9555ebea3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1868&q=80'
-            }
-          ]"
-        />
-        <Item
-          id="6"
-          :img="{
-            webp: {
-              small: 'https://picsum.photos/420/500.webp?image=327'
-            },
-            legacy: {
-              small: 'https://picsum.photos/420/500/?image=327'
-            }
-          }"
-          price="20.47$"
-          :thumbs="[
-            {
-              id: 6,
-              title: 'Thumb 6',
-              src:
-                'https://images.unsplash.com/photo-1621423028668-d5f9555ebea3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1868&q=80'
-            }
-          ]"
+          v-for="item in items.slice(3)"
+          :key="item.id"
+          :id="item.id"
+          :img="item.img"
+          :price="item.price"
+          :thumbs="item.thumbs"
         />
       </div>
     </div>
@@ -143,7 +35,13 @@
 </template>
 
 <script>
-export default {};
+export default {
+  computed: {
+    items() {
+      return this.$store.state.items;
+    }
+  }
+};
 </script>
 
 <style lang="scss">
@@ -180,13 +78,14 @@ export default {};
       "item"
       "item";
 
-      & > div {
-        min-height: 170px;
-      }
+    & > div {
+      min-height: 170px;
+    }
 
-      &:first-of-type > div:not(:nth-of-type(3)), &:last-of-type > div:not(:nth-of-type(1)) {
-        min-height: 300px;
-      }
+    &:first-of-type > div:not(:nth-of-type(3)),
+    &:last-of-type > div:not(:nth-of-type(1)) {
+      min-height: 300px;
+    }
   }
 }
 
