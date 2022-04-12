@@ -67,7 +67,7 @@ export default {
         align-self: flex-end;
         left: 0;
         right: 0;
-        bottom: -132px;
+        bottom: -108px;
         padding-top: 21px;
         padding-bottom: 17px;
         padding-left: 55px;

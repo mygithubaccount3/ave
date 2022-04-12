@@ -206,7 +206,6 @@ export default {};
 @media screen and (max-width: 768px) {
   .footer {
     margin-top: 0;
-    padding-top: 50px;
 
     & > div:first-of-type {
       flex-direction: row;
@@ -232,6 +231,8 @@ export default {};
 
     & > div:first-of-type > div,
     .footer > div:first-of-type > div > h2 {
+      margin-top: 10px;
+      margin-bottom: 10px;
       text-align: center;
     }
 
@@ -289,9 +290,9 @@ export default {};
       margin-bottom: 19px;
     }
 
-    & li {
-      letter-spacing: -2px;
-    }
+    // & li {
+    //   letter-spacing: -2px;
+    // }
   }
 
   .banners {

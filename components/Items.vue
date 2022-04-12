@@ -33,8 +33,8 @@ export default {
   computed: {
     items() {
       return this.$store.state.items;
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -42,13 +42,15 @@ export default {
 .items {
   border-top: 1px solid #eeeeee;
   margin: auto;
-  margin-top: 62px;
+  margin-top: 0;
   margin-bottom: 62px;
   padding-top: 54px;
   padding-bottom: 62px;
   width: 80%;
 
   &__nav {
+    margin-bottom: 15px;
+
     & ul {
       padding-left: 0;
       list-style-type: none;
@@ -136,6 +138,10 @@ img {
 }
 
 @media screen and (min-width: 768px) {
+  .items {
+    margin-top: 62px;
+  }
+
   .items_content {
     grid-template-columns: repeat(2, 1fr);
 
